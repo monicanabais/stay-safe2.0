@@ -3,8 +3,8 @@
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
   <div class="form-user-name">
-    <%= f.input :photo %>
-    <%= f.input :photo_cache, as: :hidden %>
+    <%= f.input :avatar %>
+    <%= f.input :avatar_cache, as: :hidden %>
 
     <%= f.input :first_name, required: true, label: '&nbsp;'.html_safe, placeholder: 'First name', label_html: { class: 'icons user-icon' } %>
     <%= f.input :last_name, required: true, label: '&nbsp;'.html_safe, placeholder: 'Last name', label_html: { class: 'icons user-icon' } %>
