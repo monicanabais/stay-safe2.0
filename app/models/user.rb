@@ -9,9 +9,6 @@ class User < ApplicationRecord
   has_many :friendships, dependent: :destroy
   has_many :friends, through: :friendships
   enum state: [:safe, :in_danger_zone, :outside_danger_zone]
-
-  mount_uploader :avatar, PhotoUploader
-
   def remove_friend(friend)
     current_user.friends.destroy(friend)
   end

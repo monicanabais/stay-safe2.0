@@ -10,7 +10,11 @@ Rails.application.routes.draw do
   end
   resources :hazards, only: :index
   namespace :admin do
-    resources :hazards, only: [:new, :create, :update]
+    resources :hazards
+    resources :users
+    resources :friend_requests
+    resources :friendships
+    resources :current_locations
   end
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
