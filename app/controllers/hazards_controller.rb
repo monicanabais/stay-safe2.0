@@ -1,0 +1,2 @@
+class HazardsController < ApplicationController
+end

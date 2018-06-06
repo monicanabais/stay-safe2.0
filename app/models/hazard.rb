@@ -1,0 +1,2 @@
+class Hazard < ApplicationRecord
+end

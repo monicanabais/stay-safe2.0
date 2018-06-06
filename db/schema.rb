@@ -10,10 +10,61 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_06_111040) do
+ActiveRecord::Schema.define(version: 2018_06_06_120317) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "current_locations", force: :cascade do |t|
+    t.float "latitude"
+    t.float "longitude"
+    t.string "location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_current_locations_on_user_id"
+  end
+
+  create_table "friend_requests", force: :cascade do |t|
+    t.bigint "user_id"
+    t.integer "friend_id", null: false
+    t.string "relationship"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["friend_id"], name: "index_friend_requests_on_friend_id"
+    t.index ["user_id", "friend_id"], name: "index_friend_requests_on_user_id_and_friend_id", unique: true
+    t.index ["user_id"], name: "index_friend_requests_on_user_id"
+  end
+
+  create_table "friendships", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "friend_id"
+    t.string "relationship"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["friend_id"], name: "index_friendships_on_friend_id"
+    t.index ["user_id", "friend_id"], name: "index_friendships_on_user_id_and_friend_id", unique: true
+    t.index ["user_id"], name: "index_friendships_on_user_id"
+  end
+
+  create_table "hazard_notifications", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "hazard_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["hazard_id"], name: "index_hazard_notifications_on_hazard_id"
+    t.index ["user_id"], name: "index_hazard_notifications_on_user_id"
+  end
+
+  create_table "hazards", force: :cascade do |t|
+    t.float "latitude"
+    t.float "longitude"
+    t.string "location"
+    t.string "type"
+    t.string "status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -36,4 +87,10 @@ ActiveRecord::Schema.define(version: 2018_06_06_111040) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "current_locations", "users"
+  add_foreign_key "friend_requests", "users"
+  add_foreign_key "friendships", "users"
+  add_foreign_key "friendships", "users", column: "friend_id"
+  add_foreign_key "hazard_notifications", "hazards"
+  add_foreign_key "hazard_notifications", "users"
 end
