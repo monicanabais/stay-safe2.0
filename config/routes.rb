@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  root to: "user#index"
+  root to: "users#index"
   resources :users do
     resources :hazard_notifications, only: :index
     resources :friend_requests, except: :show
     resources :friendships, only: [:index, :update, :destroy]
-    resources :current_locations, only: [:new, :create, :destroy]
   end
+  resources :current_locations, only: [:new, :create, :destroy]
   resources :hazards, only: :index
   namespace :admin do
     resources :hazards, only: [:new, :create, :update]
