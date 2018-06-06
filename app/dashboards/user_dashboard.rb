@@ -7,6 +7,7 @@ class UserDashboard < Administrate::BaseDashboard
   # Each different type represents an Administrate::Field object,
   # which determines how the attribute is displayed
   # on pages throughout the dashboard.
+
   ATTRIBUTE_TYPES = {
     friend_requests: Field::HasMany,
     pending_friends: Field::HasMany.with_options(class_name: "User"),
