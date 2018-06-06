@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  root to: "user#index"
+  root to: "users#index"
   resources :users do
     resources :hazard_notifications, only: :index
     resources :friend_requests, except: :show
