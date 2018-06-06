@@ -1,25 +1,6 @@
-<h1> <%= @user.first_name %>friends</h1>
+<h1> Friendships </h1>
 
-<div class="cards-container">
-  <div class="row">
+<h2>Your friends: </h2>
 
-
-    <% @friends.each do |friend| %>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-      <div class="friend-card">
-        <div class="card-main text-center">
-          <div class="joke-name">
-            <%= friend.first_name %>
-            <%= friend.last_name %>
-          </div>
-        </div>
-        <div class="friend-relationship">
-          <%= friend.friendship.relationship %>
-        </div>
-          <%= link_to 'Edit the relationship', user_friendship_path, :class => "btn edit-button" %>
-        </div>
-      </div>
-    </div>
-    <% end %>
-  </div>
-</div>
+<p><%= @friend.first_name %></p>
+<p><%= @friend.last_name %></p>

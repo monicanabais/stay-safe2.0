@@ -17,7 +17,7 @@
       <td><%= @user.first_name %></td>
       <td> <%= @user.last_name %></td>
       <td> <%= @user.email %></td>
-      <td><%= link_to 'Add as a friend', user_friend_requests_path(@user.id), method: :post,  class: "btn btn-primary" %></td>
+      <td><%= link_to 'Add as a friend', friend_requests_path(@user.id), method: :post,  class: "btn btn-primary" %></td>
     </tr>
 
   </tbody>
