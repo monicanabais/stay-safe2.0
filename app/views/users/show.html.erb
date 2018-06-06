@@ -3,6 +3,7 @@
 <table class="table">
   <thead>
     <tr>
+      <th></th>
       <th>First Name</th>
       <th>Last Name</th>
       <th>Email</th>
@@ -12,11 +13,13 @@
 
   <tbody>
     <tr>
+      <td><%= cl_image_tag @user.avatar, crop: :thumb %></td>
       <td><%= @user.first_name %></td>
       <td> <%= @user.last_name %></td>
       <td> <%= @user.email %></td>
       <td><%= link_to 'Add as a friend', friend_requests_path(@user.id), method: :post,  class: "btn btn-primary" %></td>
     </tr>
+
   </tbody>
 </table>
 <br>
