@@ -1,0 +1,10 @@
+<h1>Current Hazards</h1>
+
+<% @hazards.each do |hazard| %>
+  <p><%= hazard.type %></p>
+  <p><%= hazard.location %></p>
+  <p><%= hazard.latitude %></p>
+  <p><%= hazard.longitude %></p>
+  <p><%= hazard.status %></p>
+<% end %>
+

@@ -1,0 +1,21 @@
+<h1>Friend Requests</h1>
+
+<tbody>
+  <h1>Outgoing</h1>
+  <% @outgoing.each do |r| %>
+  <p>
+    <%= User.find(r.friend_id).first_name %> <%= User.find(r.friend_id).last_name %>
+  </p>
+  <% end %>
+  <h1>Incoming</h1>
+
+  <% @incoming.each do |d| %>
+  <p>
+   <%= User.find(d.user_id).first_name %> <%= User.find(d.user_id).last_name %>
+ </p>
+ <% end %>
+
+</tbody>
+</table>
+<br>
+

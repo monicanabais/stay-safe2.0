@@ -1,27 +1,29 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
-
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+<div class="form-container">
+  <h3>Update your profile</h3>
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
+  <div class="form-user-name">
+    <%= f.input :photo %>
+    <%= f.input :photo_cache, as: :hidden %>
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-    <% end %>
-
-    <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
-    <%= f.input :password_confirmation, required: false %>
-    <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
+    <%= f.input :first_name, required: true, label: '&nbsp;'.html_safe, placeholder: 'First name', label_html: { class: 'icons user-icon' } %>
+    <%= f.input :last_name, required: true, label: '&nbsp;'.html_safe, placeholder: 'Last name', label_html: { class: 'icons user-icon' } %>
   </div>
-
+  <%= f.input :email, label: '&nbsp;'.html_safe, required: true, autofocus: true, label_html: { class: 'icons envelope-icon' } %>
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+  <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+  <% end %>
+  <%= f.input :current_password, label: '&nbsp;'.html_safe, required: true, label_html: { class: 'icons lock-icon' }, placeholder: "current password" %>
+  <%= f.input :password, label: '&nbsp;'.html_safe, autocomplete: "off", placeholder: "new password (optional)", required: false, label_html: { class: 'icons lock-icon' } %>
+  <%= f.input :password_confirmation, label: '&nbsp;'.html_safe, placeholder: "confirm new password", required: false, label_html: { class: 'icons lock-icon' } %>
   <div class="form-actions">
-    <%= f.button :submit, "Update" %>
+    <%= f.button :submit, "Update", class: "form-button" %>
   </div>
-<% end %>
+  <% end %>
 
-<h3>Cancel my account</h3>
+  <p><%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
+  <%= link_to root_path do %>
+  <i class="fas fa-arrow-left fa-2x" style="color: black; margin-top: 30px;"></i>
+  <% end %>
+</div>
