@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
 
   :recoverable, :rememberable, :trackable, :validatable
-  mount_uploader :avatar, PhotoUploader
+  #mount_uploader :avatar, PhotoUploader
 
   has_many :friend_requests, dependent: :destroy
   has_many :pending_friends, through: :friend_requests, source: :friend
@@ -44,7 +44,7 @@ end
 # pg_search_scope :search_by_first_name_and_last_name_and_email,
 #     against: [ :first_name, :last_name, :email ],
 #     using: {
-#       tsearch: { prefix: true } 
+#       tsearch: { prefix: true }
 #     }
 
 
