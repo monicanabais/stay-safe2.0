@@ -21,7 +21,7 @@ class FriendRequestsController < ApplicationController
 
     if @friend_request.save
       # render :index, status: :created, location: @friend_request
-     redirect_to friend_requests_path
+     redirect_to root_path
     else
       render json: @friend_request.errors, status: :unprocessable_entity
     end
@@ -33,11 +33,13 @@ class FriendRequestsController < ApplicationController
   def update
     @friend_request.accept
     head :no_content
+    redirect_to friendships_path
   end
 
   def destroy
     @friend_request.destroy
     head :no_content
+    redirect_to root_path
   end
 
   private

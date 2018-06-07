@@ -3,7 +3,7 @@ Rails.application.routes.draw do
 
   root to: "users#index"
   resources :users do
-    resources :friend_requests, only: [:create]
+    resources :friend_requests, only: [:create, :destroy]
   end
 
   resources :friend_requests, except: [:show, :create]

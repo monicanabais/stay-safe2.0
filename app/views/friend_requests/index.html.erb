@@ -6,7 +6,8 @@
   <p>
    <%= User.find(d.user_id).first_name %> <%= User.find(d.user_id).last_name %>
  </p>
- <%= link_to "Accept", friend_request_path(user_id), method: :patch, class: "btn btn-primary" %>
+ <%= link_to "Accept", friend_request_path(d), method: :patch, class: "btn btn-primary" %>
+ <%= link_to "Decline", friend_request_path(d), method: :delete, class: "btn btn-danger"%>
 
  <% end %>
 
