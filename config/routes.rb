@@ -3,15 +3,21 @@ Rails.application.routes.draw do
 
   root to: "users#index"
   resources :users do
+    resources :friend_requests, only: [:create, :destroy]
+  end
+    resources :friend_requests, except: [:show, :create]
+    root to: "users#index" 
     resources :hazard_notifications, only: :index
-    resources :friend_requests, except: :show
     resources :friendships, only: [:index, :update, :destroy]
 
+    resources :current_locations, only: [:new, :create, :destroy]
+    resources :hazards, only: :index
+    namespace :admin do
+      resources :hazards
+      resources :users
+      resources :friend_requests
+      resources :friendships
+      resources :current_locations
+  
   end
-  resources :current_locations, only: [:create]
-  resources :hazards, only: :index
-  namespace :admin do
-    resources :hazards, only: [:new, :create, :update]
-  end
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

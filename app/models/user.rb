@@ -9,17 +9,14 @@ class User < ApplicationRecord
   has_many :friendships, dependent: :destroy
   has_many :friends, through: :friendships
   enum state: [:safe, :in_danger_zone, :outside_danger_zone]
-
   mount_uploader :photo, PhotoUploader
-
-
   has_many :current_locations
 
   def remove_friend(friend)
     current_user.friends.destroy(friend)
   end
 
-
-
-
+  def friendship_with(friend)
+    Friendship.where(user:self, friend:friend).first
+  end
 end

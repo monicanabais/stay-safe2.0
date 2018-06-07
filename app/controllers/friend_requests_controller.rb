@@ -1,5 +1,10 @@
 class FriendRequestsController < ApplicationController
   before_action :set_friend_request, except: [:index, :create, :new]
+  before_action :user
+
+  def user
+    @user = current_user
+  end
 
   def index
     @incoming = FriendRequest.where(friend: current_user)
@@ -16,7 +21,7 @@ class FriendRequestsController < ApplicationController
 
     if @friend_request.save
       # render :index, status: :created, location: @friend_request
-     redirect_to user_friend_requests_path
+     redirect_to root_path
     else
       render json: @friend_request.errors, status: :unprocessable_entity
     end
@@ -27,12 +32,14 @@ class FriendRequestsController < ApplicationController
 
   def update
     @friend_request.accept
-    head :no_content
+    
+    redirect_to friendships_path
   end
 
   def destroy
     @friend_request.destroy
-    head :no_content
+    
+    redirect_to root_path
   end
 
   private
