@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   resources :users do
     resources :friend_requests, only: [:create, :destroy]
   end
-
+  
   resources :friend_requests, except: [:show, :create]
   resources :hazard_notifications, only: :index
   resources :friendships, only: [:index, :update, :destroy]

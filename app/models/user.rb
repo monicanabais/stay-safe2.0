@@ -20,4 +20,8 @@ class User < ApplicationRecord
       HazardNotification.where(user: friend).map(&:user).include? self.friendships
     end
   end
+
+  def friendship_with(friend)
+    Friendship.where(user:self, friend:friend).first
+  end
 end
