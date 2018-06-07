@@ -1,13 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
 
+  root to: "users#show/:id"
 
   resources :users do
-    resources :friend_requests, only: [:create]
+    resources :friend_requests, only: [:create, :destroy]
   end
-
   resources :friend_requests, except: [:show, :create]
-  root to: "users#show/:id"
   resources :hazard_notifications, only: :index
   resources :friendships, only: [:index, :update, :destroy]
   resources :current_locations, only: [:new, :create, :destroy]
@@ -18,5 +17,6 @@ Rails.application.routes.draw do
     resources :friend_requests
     resources :friendships
     resources :current_locations
+
   end
 end
