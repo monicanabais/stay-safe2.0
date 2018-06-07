@@ -14,7 +14,7 @@
   <tbody>
     <%  @users.each do |user| %>
       <tr>
-        <td><%= cl_image_tag user.avatar, crop: :thumb %></td>
+         <td><%= cl_image_tag user.avatar, crop: :thumb %></td>
         <td><%= user.first_name %></td>
       <td> <%= user.last_name %></td>
       <td> <%= user.email %></td>
@@ -24,4 +24,3 @@
   </tbody>
 </table>
 <br>
-
