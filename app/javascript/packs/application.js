@@ -1,8 +1,7 @@
 import "bootstrap";
 
-import getUserLocation from '../components/user_location';
+import { setCurrentLocation } from '../components/user_location';
 
-getUserLocation()
-
-
-const navbar = document.querySelector('.navbar-container');
+document.app = {
+  setCurrentLocation,
+}
