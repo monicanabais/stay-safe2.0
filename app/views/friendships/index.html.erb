@@ -1,6 +1,6 @@
 <h1> Friendships </h1>
 
 <h2>Your friends: </h2>
-
-<p><%= @friend.first_name %></p>
-<p><%= @friend.last_name %></p>
+<% @friends.each do |friend| %>
+<strong><%= friend.first_name %> <%= friend.last_name %></strong>
+<% end %>

@@ -33,7 +33,7 @@ class FriendRequestsController < ApplicationController
   def update
     @friend_request.accept
     
-    redirect_to root_path
+    redirect_to friendships_path
   end
 
   def destroy
