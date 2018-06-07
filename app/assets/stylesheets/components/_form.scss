@@ -1,0 +1,61 @@
+.form-container {
+  width: 315px;
+  margin: 0 auto;
+  text-align: center;
+  h3 {
+    padding-bottom: 30px;
+  }
+  .form-user-name {
+    display: flex;
+    justify-content: space-between;
+    .user_first_name {
+      margin-right: 10px;
+    }
+  }
+}
+
+#user_email, #user_password, #user_password_confirmation, #user_current_password, #user_first_name, #user_last_name {
+  background-color: #F4F4F4;
+  border: none;
+  box-shadow: none;
+}
+
+.user_email, .user_password, .user_password_confirmation, .user_current_password, .user_first_name, .user_last_name {
+  border-bottom: 1px solid black;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.pen-icon {
+  background-image: image-url('icons/edit.svg');
+}
+.user-icon {
+  background-image: image-url('icons/user.svg');
+}
+.lock-icon {
+  background-image: image-url('icons/padlock.svg');
+}
+.envelope-icon {
+  background-image: image-url('icons/envelope.svg');
+}
+
+.icons {
+  width: 20px;
+  height: 19px;
+  background-size: cover;
+  font-size: 1px;
+}
+
+.form-button {
+  width: 315px;
+  border-radius: 27.5px;
+  height: 55px;
+  margin: 30px 0 30px 0;
+  border: 1px solid #dcdada;
+  transition: 0.5s;
+  &:hover {
+    font-weight: bold;
+    transition: 0.5s;
+  }
+}
