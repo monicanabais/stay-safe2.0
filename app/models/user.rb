@@ -3,7 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  mount_uploader :avatar, PhotoUploader
+  mount_uploader :avatar, AvatarUploader
   has_many :friend_requests, dependent: :destroy
   has_many :pending_friends, through: :friend_requests, source: :friend
   has_many :friendships, dependent: :destroy
@@ -12,6 +12,12 @@ class User < ApplicationRecord
   enum state: [:safe, :in_danger_zone, :outside_danger_zone]
 
   def remove_friend(friend)
-    current_user.friends.destroy(friend)
+    self.friends.destroy(friend)
+  end
+
+  def friends_notified
+    self.friendships._select! do |friend|
+      HazardNotification.where(user: friend).map(&:user).include? self.friendships
+    end
   end
 end
