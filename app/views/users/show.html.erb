@@ -1,17 +1,9 @@
 <h1>Users</h1>
-
+<!--
+<p>
+  <%#= cl_image_tag @user.avatar, crop: :thumb %>
+</p> -->
 <table class="table">
-  <thead>
-    <tr>
-      <th></th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Email</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
     <tr>
       <td><%= cl_image_tag @user.avatar, crop: :thumb %></td>
       <td><%= @user.first_name %></td>
@@ -19,8 +11,20 @@
       <td> <%= @user.email %></td>
       <td><%= link_to 'Add as a friend', friend_requests_path(@user.id), method: :post,  class: "btn btn-primary" %></td>
     </tr>
-
-  </tbody>
 </table>
 <br>
 
+<p>Click to turn safety check on:</p>
+<button id='location'">OK</button>
+
+<% content_for :after_js do %>
+<script>
+
+  const button = document.getElementById('location')
+  button.addEventListener("click", function () {
+     document.app.setCurrentLocation()
+  })
+
+
+</script>
+<% end %>
