@@ -7,8 +7,8 @@ Rails.application.routes.draw do
   end
 
   resources :friend_requests, except: [:show, :create]
-  root to: "users#index" 
-  resources :hazard_notifications, only: :index
+  root to: "users#index"
+  resources :hazard_notifications, only: [:index, :create]
   resources :friendships, only: [:index, :update, :destroy]
   resources :current_locations, only: [:new, :create, :destroy]
   resources :hazards, only: :index
