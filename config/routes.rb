@@ -1,7 +1,12 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  root to: "users#show/:id"
+
+  authenticated :user do
+    root to: "users#show", as: :authenticated_root, via: :get
+  end
+
+  root to: "pages#home"
 
   resources :users do
     resources :friend_requests, only: [:create, :destroy]
@@ -11,6 +16,7 @@ Rails.application.routes.draw do
   resources :friendships, only: [:index, :update, :destroy]
   resources :current_locations, only: [:new, :create, :destroy]
   resources :hazards, only: :index
+
   namespace :admin do
     resources :hazards
     resources :users
