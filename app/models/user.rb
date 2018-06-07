@@ -12,7 +12,14 @@ class User < ApplicationRecord
 
   mount_uploader :photo, PhotoUploader
 
+
+  has_many :current_locations
+
   def remove_friend(friend)
     current_user.friends.destroy(friend)
   end
+
+
+
+
 end
