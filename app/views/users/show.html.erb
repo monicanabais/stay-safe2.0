@@ -1,19 +1,45 @@
-<h1>Users</h1>
 
 
-<%= cl_image_tag @user.avatar, crop: :thumb %>
-<p><%= @user.first_name%> <%= @user.last_name %></p>
-<p><%= @user.email %></p>
+<div class="profile-container">
 
-<%= link_to 'Edit your profile', edit_user_registration_path %>
+  <div class="page-intro">
+    <p class="text-center ">YOUR PROFILE</p>
+  </div>
 
-<p>Click to turn safety check on:</p>
-<button id='location'">OK</button>
-<% content_for :after_js do %>
-<script>
-  const button = document.getElementById('location')
-  button.addEventListener("click", function () {
+  <div class="profile-avatar">
+    <%#= cl_image_tag @user.avatar, crop: :thumb %>
+  </div>
+
+  <div class="profile-name">
+    <p class="text-center"><%= @user.first_name %> <%= @user.last_name %></p>
+  </div>
+
+  <% content_for :after_js do %>
+  <button id='location' class="text-center location-turnon">Turn safety check ON</button>
+  <script>
+
+    const button = document.getElementById('location')
+    button.addEventListener("click", function () {
      document.app.setCurrentLocation()
-  })
-</script>
-<% end %>
+   })
+
+  </script>
+  <% end %>
+
+  <div class="edit">
+    <%= link_to edit_user_registration_path do %>
+      <p>Edit your profile</p>
+    <% end %>
+  </div>
+
+  <div class="profile-settings-and-signout">
+    <%= link_to destroy_user_session_path do %>
+      <p class="sign-out">SIGN OUT</p>
+    <% end %>
+    <p class="separation"></p>
+    <p class="settings">SETTINGS</p>
+  </div>
+
+
+</div>
+

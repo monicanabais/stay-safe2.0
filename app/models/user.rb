@@ -12,6 +12,8 @@ class User < ApplicationRecord
   has_many :friends, through: :friendships
 
   enum state: [:safe, :in_danger_zone, :outside_danger_zone]
+
+
   has_many :current_locations, dependent: :destroy
 
   include PgSearch
@@ -21,6 +23,7 @@ class User < ApplicationRecord
  :associated_against => {
           comments: [:message],
           user: [:first_name, :last_name, :email]}
+
 
   def remove_friend(friend)
     self.friends.destroy(friend)

@@ -1,0 +1,89 @@
+
+.profile-container {
+  height: 100vh;
+  overflow: auto;
+}
+
+.page-intro {
+  margin-top: 30px;
+  p {
+    text-shadow: 0.3px 0.3px 1px rgba(0, 0, 0, 0.25);
+    font-size: 22px;
+  }
+}
+
+.profile-avatar {
+  border-radius: 50%;
+  width: 135px;
+  height: 135px;
+  background-color: gray;
+  margin: 0 auto;
+  margin-top: 35px;
+}
+
+.profile-name {
+  p {
+    font-size: 35px;
+    margin-top: 35px;
+  }
+  margin: 0 auto;
+  width: 100vw;
+  text-shadow: 0.3px 0.3px 1px rgba(0, 0, 0, 0.25);
+}
+
+.location-turnon {
+  width: 315px;
+  height: 55px;
+  background-color: #608ACA;
+  border-radius: 50px;
+  margin: 0 auto;
+  margin-top: -315px;
+  color: white;
+  display: block;
+  text-align: center;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  border: none;
+}
+
+.edit {
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  width: 223px;
+  height:40px;
+  border-radius: 50px;
+  background-color: #79C4D2;
+  margin: 0 auto;
+  margin-top: 135px;
+
+  p {
+    text-align: center;
+    color: white;
+    padding-top: 6px;
+  }
+}
+
+.profile-settings-and-signout {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 45px;
+  p {
+    text-shadow: 0.3px 0.3px 1px rgba(0, 0, 0, 0.25);
+    color: black;
+  }
+}
+
+.separation {
+  border: 0.5px solid #BCBCBC;
+  height: 46px;
+}
+
+
+
+
+
+
+
+
+
+
+
