@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="150px" height="490px" viewBox="0 0 150 490" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="386px" height="386px" viewBox="0 0 386 386" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
     <title>Slice 1</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="pencil" fill-rule="nonzero">
+        <g id="pencil" transform="translate(176.274170, 210.274170) rotate(45.000000) translate(-176.274170, -210.274170) translate(101.274170, -34.725830)" fill-rule="nonzero">
             <path d="M0.5,395.3 C0.5,397.5 1.2,399.6 2.5,401.3 L66.9,485.7 C68.8,488.2 71.7,489.6 74.8,489.6 C77.9,489.6 80.8,488.2 82.7,485.7 L147.1,401.3 C148.4,399.6 149.1,397.5 149.1,395.3 L149.1,124.2 C149.1,118.7 144.7,114.3 139.2,114.3 C133.7,114.3 129.3,118.7 129.3,124.2 L129.3,392 L74.8,463.4 L20.3,392 L20.3,124.7 C20.3,119.2 15.9,114.8 10.4,114.8 C4.9,114.8 0.5,119.2 0.5,124.7 L0.5,395.3 Z" id="Shape" fill="#578ACF"></path>
             <path d="M64.9,124.7 L64.9,373.7 C64.9,379.2 69.3,383.6 74.8,383.6 C80.3,383.6 84.7,379.2 84.7,373.7 L84.7,124.7 C84.7,119.2 80.3,114.8 74.8,114.8 C69.3,114.8 64.9,119.2 64.9,124.7 Z" id="Shape" fill="#578ACF"></path>
             <path d="M0.5,38.9 L0.5,83.2 C0.5,88.7 4.9,93.1 10.4,93.1 L139.1,93.1 C144.6,93.1 149,88.7 149,83.2 L149,38.9 C149,17.5 131.6,0 110.1,0 L39.4,0 C18,0 0.5,17.4 0.5,38.9 Z M129.3,38.9 L129.3,73.3 L20.3,73.3 L20.3,38.9 C20.3,28.4 28.9,19.8 39.4,19.8 L110.1,19.8 C120.7,19.8 129.3,28.3 129.3,38.9 Z" id="Shape" fill="#68CCDA"></path>
