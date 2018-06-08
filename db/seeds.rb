@@ -4,25 +4,29 @@ users = [
     email: "maria@mail.com",
     first_name: "Maria",
     last_name: "Castro" ,
-    password: 123456
+    password: 123456,
+    admin: true
   },
   {
     email: "monica@mail.com",
     first_name: "Monica",
     last_name: "Nabais",
-    password: 123456
+    password: 123456,
+    admin: true
   },
   {
     email: "laura@mail.com",
     first_name: "Laura",
     last_name: "Lotti" ,
-    password: 123456
+    password: 123456,
+    admin: true
   },
   {
     email: "pavel@mail.com",
     first_name: "Pavel",
     last_name: "Naumov",
-    password: 123456
+    password: 123456,
+    admin: true
   },
   {
     email: "nick@mail.com",
@@ -56,3 +60,7 @@ users = [
   },
 
 ]
+
+users.each do |user|
+  User.create(user)
+end
