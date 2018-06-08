@@ -25,7 +25,7 @@
   </div>
 
   <div class="navbar-button add-user">
-    <%= link_to hazards_path do %>
+    <%= link_to new_friend_request_path do %>
     <svg class="navbar-icon <%= "active" if action_name == "new" && controller_name == "friend_requests" %>" width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <path d="M50,0 C22.4307692,0 0,22.4288462 0,50 C0,77.5711538 22.4307692,100 50,100 C77.5692308,100 100,77.5711538 100,50 C100,22.4288462 77.5692308,0 50,0 Z M74.0384615,53.8461538 L53.8461538,53.8461538 L53.8461538,75 C53.8461538,77.1230769 52.1230769,78.8461538 50,78.8461538 C47.8769231,78.8461538 46.1538462,77.1230769 46.1538462,75 L46.1538462,53.8461538 L25.9615385,53.8461538 C23.8384615,53.8461538 22.1153846,52.1230769 22.1153846,50 C22.1153846,47.8769231 23.8384615,46.1538462 25.9615385,46.1538462 L46.1538462,46.1538462 L46.1538462,26.9230769 C46.1538462,24.8 47.8769231,23.0769231 50,23.0769231 C52.1230769,23.0769231 53.8461538,24.8 53.8461538,26.9230769 L53.8461538,46.1538462 L74.0384615,46.1538462 C76.1615385,46.1538462 77.8846154,47.8769231 77.8846154,50 C77.8846154,52.1230769 76.1615385,53.8461538 74.0384615,53.8461538 Z" id="Shape" fill="#91A5C3" fill-rule="nonzero"></path>
@@ -35,7 +35,7 @@
   </div>
 
   <div class="navbar-button friends">
-    <%= link_to hazards_path do %>
+    <%= link_to friendships_path do %>
     <svg class="navbar-icon <%= "active" if action_name == "show" && controller_name == "friendships" %>" width="178px" height="179px" viewBox="0 0 178 179" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
       <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -46,7 +46,7 @@
   </div>
 
   <div class="navbar-button notifications">
-    <%= link_to hazards_path do %>
+    <%= link_to '#' do %>
       <svg class="navbar-icon <%= "active" if action_name == "index" && controller_name == "hazard_notifications" %>" width="170px" height="170px" viewBox="0 0 170 170" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
