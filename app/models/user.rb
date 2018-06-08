@@ -10,7 +10,6 @@ class User < ApplicationRecord
   has_many :friends, through: :friendships
 
   enum state: [:safe, :in_danger_zone, :outside_danger_zone]
-  mount_uploader :photo, PhotoUploader
   has_many :current_locations
 
   def remove_friend(friend)
