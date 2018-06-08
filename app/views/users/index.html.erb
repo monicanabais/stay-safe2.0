@@ -1,6 +1,5 @@
 
 <h1>users page</h1>
-<!--
 <h1>Users</h1>
 
 <%= form_tag root_path, method: :get do %>
@@ -27,7 +26,7 @@
     <%  @users.each do |user| %>
       <% if user != current_user %>
       <tr>
-        
+
         <td><%= user.first_name %></td>
       <td> <%= user.last_name %></td>
       <td> <%= user.email %></td>
@@ -38,4 +37,4 @@
   </tbody>
 </table>
 <br>
- -->
+
