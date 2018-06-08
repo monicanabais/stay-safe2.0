@@ -1,11 +1,10 @@
 <div class="form-container">
   <h3>Update your profile</h3>
-  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :patch }) do |f| %>
   <%= f.error_notification %>
-  <div class="form-user-name">
-    <%= f.input :avatar %>
+    <%= f.input :avatar, label: 'Photo' %>
     <%= f.input :avatar_cache, as: :hidden %>
-
+  <div class="form-user-name">
     <%= f.input :first_name, required: true, label: '&nbsp;'.html_safe, placeholder: 'First name', label_html: { class: 'icons user-icon' } %>
     <%= f.input :last_name, required: true, label: '&nbsp;'.html_safe, placeholder: 'Last name', label_html: { class: 'icons user-icon' } %>
   </div>
