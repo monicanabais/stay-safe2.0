@@ -1,15 +1,23 @@
-
-
-<!-- <h1>Users</h1> -->
-
-<%#= form_tag users_path, method: :get do %>
-  <%#= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Find a user"
-  %>
-
-<%# end %>
-<div class="row">
-<%= render 'components/users_cards' %>
+<div class="form-container">
+  <h3>Find your family and friends</h3>
+  <div class="search-form user_first_name">
+    <%= form_tag users_path, method: :get do %>
+      <%= text_field_tag :query, params[:query], class: "form-control", id: "user_first_name",placeholder: "Search" %>
+    <% end %>
+  </div>
 </div>
+<% @friends.each do |friend| %>
+  <% @users.each do |user| %>
+    <% if user != current_user && user != friend %>
+      <div class="user-card">
+        <div class="card-info">
+          <div class="small-card-user-avatar"></div>
+          <p>
+            <%= user.first_name %> <%= user.last_name %>
+          </p>
+          </div>
+        <%= link_to 'Add', user_friend_requests_path(user), method: :post,  class: "card-button" %>
+      </div>
+    <% end %>
+  <% end %>
+<% end %>

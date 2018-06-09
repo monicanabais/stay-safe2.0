@@ -4,12 +4,21 @@
 
 .alert {
   margin: 0;
+  width: 100vw;
   text-align: center;
   color: white;
+  position: absolute;
+  top: 0;
+  padding: 15px 0;
 }
 .alert-info {
-  background: $green;
+  background: #466CA4;
 }
 .alert-warning {
-  background: $red;
+  background: #B43C36;
+}
+
+.alert-info, .alert-warning {
+  opacity: 0.7;
+  border: none;
 }

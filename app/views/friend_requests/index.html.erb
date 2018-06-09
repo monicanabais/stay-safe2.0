@@ -1,17 +1,8 @@
-<h1>Friend requests of <%= current_user.first_name %> </h1>
-
-  <h2>Incoming</h2>
-
-  <% @incoming.each do |d| %>
+<h3>Friend requests</h3>
+<% @incoming.each do |d| %>
   <p>
    <%= User.find(d.user_id).first_name %> <%= User.find(d.user_id).last_name %>
- </p>
- <%= link_to "Accept", friend_request_path(d), method: :patch, class: "btn btn-primary" %>
- <%= link_to "Decline", friend_request_path(d), method: :delete, class: "btn btn-danger"%>
-
- <% end %>
-
-</tbody>
-</table>
-<br>
-
+  </p>
+  <%= link_to "Accept", friend_request_path(d), method: :patch, class: "btn btn-primary" %>
+  <%= link_to "Decline", friend_request_path(d), method: :delete, class: "btn btn-danger"%>
+<% end %>
