@@ -3,28 +3,28 @@
 
     <div class="col-xs-6 col-md-6">
 
-      <div class="card">
+      <div class="friends-card">
 
-        <div class="card-front">
+        <div class="friends-card-front">
 
-          <div class="card-front-main-info">
+          <div class="friends-card-front-main-info">
 
-            <div class="card-user-avatar">
+            <div class="friends-card-user-avatar">
             </div>
 
-            <div class="card-user-name">
+            <div class="friends-card-user-name">
               <p class="text-center"><%= friend.first_name %> <%= friend.last_name %></p>
             </div>
           </div>
 
-          <div class="card-front-arrow">
+          <div class="friends-card-front-arrow">
             <%= image_tag 'cards_front_arrow.svg' %>
           </div>
 
-          <div class="card-button-content">
-            <div class="card-corner-button"></div>
+          <div class="friends-card-button-content">
+            <div class="friends-card-corner-button"></div>
 
-            <div class="card-hazard-warnings hidden">
+            <div class="friends-card-hazard-warnings hidden">
               <p><%= image_tag 'cards_fire.svg' %> Kind</p>
               <p><%= image_tag 'cards_location' %> Location</p>
               <p><%= image_tag 'cards_loading' %> Status</p>
@@ -33,12 +33,12 @@
 
         </div>
 
-        <div class="card-back hide">
-          <div class="card-back-arrow">
+        <div class="friends-card-back hide">
+          <div class="friends-card-back-arrow">
             <%= image_tag 'cards_back_arrow.svg' %>
           </div>
 
-          <div class="card-actions">
+          <div class="friends-card-actions">
             <p><%= image_tag 'cards_edit.svg' %> Edit</p>
             <p><%= image_tag 'cards_delete.svg' %> Unfriend</p>
           </div>
