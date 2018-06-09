@@ -1,16 +1,16 @@
 function rotateCards() {
-  const cards = document.querySelectorAll('.card');
+  const cards = document.querySelectorAll('.friends-card');
 
 
   cards.forEach((card) => {
 
 
-    const frontArrow = card.querySelector('.card-front-arrow');
-    const backArrow = card.querySelector('.card-back-arrow');
+    const frontArrow = card.querySelector('.friends-card-front-arrow');
+    const backArrow = card.querySelector('.friends-card-back-arrow');
 
 
-    const front = card.querySelector('.card-front');
-    const back = card.querySelector('.card-back');
+    const front = card.querySelector('.friends-card-front');
+    const back = card.querySelector('.friends-card-back');
 
 
     if (frontArrow) {

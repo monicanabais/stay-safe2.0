@@ -1,0 +1,51 @@
+
+<div class="profile-container">
+
+  <div class="page-intro">
+    <p class="text-center ">YOUR PROFILE</p>
+  </div>
+
+  <div class="profile-avatar">
+    <%= cl_image_tag @user.avatar, crop: :thumb %>
+  </div>
+
+  <div class="profile-name">
+    <p class="text-center"><%= @user.first_name %> <%= @user.last_name %></p>
+  </div>
+
+  <% content_for :after_js do %>
+  <button id='location' class="text-center location-turnon">Turn safety check ON</button>
+  <script>
+
+    const button = document.getElementById('location')
+    button.addEventListener("click", function () {
+     document.app.setCurrentLocation()
+   })
+
+ </script>
+ <% end %>
+
+<div class="edit">
+  <%#= link_to edit_user_registration_path do %>
+  <p>Edit your profile</p>
+  <%# end %>
+</div>
+<div class="profile-settings-signout-edit">
+
+  <p class="sign-out">SETTINGS</p>
+  <p class="separation"></p>
+
+  <%= link_to edit_user_registration_path do %>
+    <p class="sign-out">EDIT</p>
+  <% end %>
+
+  <p class="separation"></p>
+
+    <%= link_to destroy_user_session_path do %>
+  <p class="settings">SIGN OUT</p>
+  <% end %>
+</div>
+
+
+</div>
+
