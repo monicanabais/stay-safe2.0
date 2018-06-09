@@ -33,7 +33,7 @@
   </div>
 
   <div class="profile-settings-and-signout">
-    <%= link_to destroy_user_session_path do %>
+    <%= link_to destroy_user_session_path, method: :delete do %>
       <p class="sign-out">SIGN OUT</p>
     <% end %>
     <p class="separation"></p>

@@ -35,7 +35,7 @@
   width: 315px;
   height: 55px;
   background-color: #608ACA;
-  border-radius: 50px;
+  border-radius: 27.5px;
   margin: 0 auto;
   margin-top: -315px;
   color: white;
@@ -43,13 +43,16 @@
   text-align: center;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
   border: none;
+  &:focus {
+    background-color: #56bf7e;
+  }
 }
 
 .edit {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
   width: 223px;
   height:40px;
-  border-radius: 50px;
+  border-radius: 27.5px;
   background-color: #79C4D2;
   margin: 0 auto;
   margin-top: 135px;
