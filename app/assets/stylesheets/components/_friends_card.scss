@@ -1,19 +1,18 @@
+.friends-cards-container {
+    width: 100%;
+    margin: 10px 0;
+    margin-left: 25px;
+    height: 100%;
+}
 
 .hide {
   display: none;
 
 }
 
-.cards-container {
-  margin: 0 50px 100px 50px;
- }
 
-.card-front {
+.friends-card-front {
   transition: 1s;
-}
-
-.cards-container {
-  margin: 0 50px 100px 50px;
 }
 
 .front-shadow {
@@ -27,56 +26,57 @@
   text-shadow: 0 0 5px rgba(0,0,0,0.5);
 }
 
-.card {
+.friends-card {
   position: relative;
   border-radius: 10px;
   height: 180px;
   width: 160px;
   background-color: white;
-  margin: 10px 0;
+  margin: 10px 6px;
   transition: transform 0.5s;
   transform-style: preserve-3d;
 }
 
-.card.flipped {
+.friends-card.flipped {
   transform: rotateY(-180deg);
   transition: transform 0.5s;
   transform-style: preserve-3d;
 
 }
 
-.card-user-avatar {
+.friends-card-user-avatar {
   border-radius: 50%;
   width: 70px;
   height: 70px;
   background-color: gray;
   position: absolute;
-  top: 25px;
+  top: 35px;
   left: 44px;
 }
 
-.card-user-name {
+.friends-card-user-name {
   position: absolute;
   width: 140px;
-  top: 105px;
+  top: 125px;
   left: 10px;
   p {
     font-size: 18px;
+    text-shadow: 0.3px 0.3px 1px rgba(0, 0, 0, 0.25);
   }
 }
 
-.card-user-relationship {
-  position: absolute;
-  width: 140px;
-  top: 135px;
-  left: 10px;
-  p {
-    font-size: 13px;
-    font-weight: lighter;
-  }
-}
+// .friends-card-user-relationship {
+//   position: absolute;
+//   width: 140px;
+//   top: 135px;
+//   left: 10px;
+//   p {
+//     font-size: 13px;
+//     font-weight: lighter;
+//   }
+// }
 
-.card-corner-button {
+.friends-card-corner-button {
   position: absolute;
   width: 31.111px;
   height: 35px;
@@ -88,7 +88,7 @@
   transition: 2s;
 }
 
-.card-big-corner-button {
+.friends-card-big-corner-button {
   position: absolute;
   width: 160px;
   height: 180px;
@@ -101,7 +101,7 @@
   left: 0px;
 }
 
-.card-front-arrow {
+.friends-card-front-arrow {
   position: absolute;
   top: 162px;
   left: 140px;
@@ -113,12 +113,12 @@
   }
 
 }
-.card-main-hidden {
+.friends-card-main-hidden {
   opacity: 0;
   transition: 1s;
 }
 
-.card-hazard-warnings {
+.friends-card-hazard-warnings {
   position: absolute;
   top: 20px;
   left: 15px;
@@ -137,13 +137,13 @@
     }
 }
 
-.card-hazard-warnings-appear {
+.friends-card-hazard-warnings-appear {
   opacity: 1;
   transition: 3s;
 }
 
 
-.card-back-arrow {
+.friends-card-back-arrow {
  position: absolute;
   top: 162px;
   right: 140px;
@@ -155,7 +155,7 @@
   }
 }
 
-.card-back {
+.friends-card-back {
   transition: 2s;
   -moz-transform: scale(-1, 1);
 -webkit-transform: scale(-1, 1);
@@ -175,7 +175,7 @@ transform: scale(-1, 1);
   transition: 1s;
 }
 
-.card-actions {
+.friends-card-actions {
   position: absolute;
   top: 20px;
   left: 20px;
