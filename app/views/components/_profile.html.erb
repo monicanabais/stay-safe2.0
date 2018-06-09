@@ -25,11 +25,6 @@
  </script>
  <% end %>
 
-<div class="edit">
-  <%#= link_to edit_user_registration_path do %>
-  <p>Edit your profile</p>
-  <%# end %>
-</div>
 <div class="profile-settings-signout-edit">
 
   <p class="sign-out">SETTINGS</p>
@@ -41,7 +36,7 @@
 
   <p class="separation"></p>
 
-    <%= link_to destroy_user_session_path do %>
+    <%= link_to destroy_user_session_path, method: :delete do %>
   <p class="settings">SIGN OUT</p>
   <% end %>
 </div>

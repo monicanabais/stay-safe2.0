@@ -2,8 +2,8 @@
   <h3>Update</h3>
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :patch }) do |f| %>
   <%= f.error_notification %>
-  <%= f.input :avatar, label: 'Photo' %>
-  <%= f.input :avatar_change, as: :hidden %>
+  <%#= f.input :avatar, label: 'Photo' %>
+  <%#= f.input :avatar_change, as: :hidden %>
   <div class="form-user-name">
     <%= f.input :first_name, required: true, label: '&nbsp;'.html_safe, placeholder: 'First name', label_html: { class: 'icons user-icon' } %>
     <%= f.input :last_name, required: true, label: '&nbsp;'.html_safe, placeholder: 'Last name', label_html: { class: 'icons user-icon' } %>
@@ -13,8 +13,8 @@
   <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
   <% end %>
   <%= f.input :current_password, label: '&nbsp;'.html_safe, required: true, label_html: { class: 'icons lock-icon' }, placeholder: "current password" %>
-  <%#= f.input :password, label: '&nbsp;'.html_safe, autocomplete: "off", placeholder: "new password (optional)", required: false, label_html: { class: 'icons lock-icon' } %>
-  <%#= f.input :password_confirmation, label: '&nbsp;'.html_safe, placeholder: "confirm new password", required: false, label_html: { class: 'icons lock-icon' } %>
+  <%= f.input :password, label: '&nbsp;'.html_safe, autocomplete: "off", placeholder: "new password (optional)", required: false, label_html: { class: 'icons lock-icon' } %>
+  <%= f.input :password_confirmation, label: '&nbsp;'.html_safe, placeholder: "confirm new password", required: false, label_html: { class: 'icons lock-icon' } %>
   <div class="form-actions">
     <%= f.button :submit, "Update", class: "form-button" %>
   </div>
@@ -22,7 +22,7 @@
 
   <p><%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
-  <%= link_to root_path do %>
+  <%= link_to user_path(current_user) do %>
     <svg style="margin-top: 10px;" width="30px" height="22px" viewBox="0 0 512 376" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
       <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
       <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
