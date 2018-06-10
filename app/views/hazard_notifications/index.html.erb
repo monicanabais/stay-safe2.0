@@ -1,9 +1,9 @@
 <h1>Your Notifications</h1>
 
-<% @hazard_notifications.each do |hazard_notif| %>
-  <% if hazard_notif.user == current_user %>
+<% @hazard_notifications.each do |hazard_notification| %>
+  <% if hazard_notification.user == current_user %>
   <p>You are <%= current_user.state %></p>
-  <% elsif hazard_notif.user == current_user.friends_notified %>
+  <% elsif hazard_notification.user.friends == current_user.friends_notified %>
   <p>Your <%= @user.relationship %> <%= @user.friendship.first_name @user.friendship.last_name%> is <%= @user.friendship.state %> </p>
 <% end %>
 <% end %>
