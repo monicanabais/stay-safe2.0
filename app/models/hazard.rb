@@ -7,7 +7,7 @@ class Hazard < ApplicationRecord
   after_save :find_and_notify_nearby_people
 
   def find_and_notify_nearby_people
-    people_nearby = CurrentLocation.near(self.location, 10).map(&:user)
+    people_nearby = CurrentLocation.near(self.location, 20).map(&:user)
     people_nearby.each do |user|
       HazardNotification.create(user: user, hazard: self)
       user.update(state: :in_danger_zone)
