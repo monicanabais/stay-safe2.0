@@ -1,4 +1,4 @@
-
+User.destroy_all
 users = [
   {
     email: "maria@mail.com",

@@ -1,22 +1,38 @@
 <div class="form-container">
   <h3>Find your family and friends</h3>
   <div class="search-form user_first_name">
-    <%= form_tag users_path, method: :get do %>
+    <%= form_tag(users_path, method: :get) do %>
       <%= text_field_tag :query, params[:query], class: "form-control", id: "user_first_name",placeholder: "Search" %>
     <% end %>
   </div>
 </div>
-<% @friends.each do |friend| %>
+<% if @friends.any? %>
+  <% @friends.each do |friend| %>
+    <% @users.each do |user| %>
+      <% if user != current_user && user != friend %>
+        <div class="user-card">
+          <div class="user-card-info">
+            <div class="small-card-user-avatar"></div>
+            <p>
+              <%= user.first_name %> <%= user.last_name %>
+            </p>
+          </div>
+          <%= link_to 'Add', user_friend_requests_path(user), method: :post,  class: "user-card-button" %>
+        </div>
+      <% end %>
+    <% end %>
+  <% end %>
+<% else %>
   <% @users.each do |user| %>
-    <% if user != current_user && user != friend %>
+    <% if user != current_user %>
       <div class="user-card">
-        <div class="card-info">
+        <div class="user-card-info">
           <div class="small-card-user-avatar"></div>
           <p>
             <%= user.first_name %> <%= user.last_name %>
           </p>
-          </div>
-        <%= link_to 'Add', user_friend_requests_path(user), method: :post,  class: "card-button" %>
+        </div>
+        <%= link_to 'Add', user_friend_requests_path(user), method: :post,  class: "user-card-button" %>
       </div>
     <% end %>
   <% end %>
