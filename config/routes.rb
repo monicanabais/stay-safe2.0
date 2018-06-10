@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       root to: 'users#show', as: :authenticated_root, via: :get
     end
     unauthenticated do
-      root to: 'devise/sessions#new', as: :unauthenticated_root
+      root to: 'pages#home', as: :unauthenticated_root
     end
   end
 
