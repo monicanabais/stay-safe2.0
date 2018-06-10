@@ -12,7 +12,9 @@
       <% if user != current_user && user != friend %>
         <div class="user-card">
           <div class="user-card-info">
-            <div class="small-card-user-avatar"></div>
+            <div class="small-card-user-avatar">
+              <%= cl_image_tag user.avatar, crop: :thumb %>
+            </div>
             <p>
               <%= user.first_name %> <%= user.last_name %>
             </p>
@@ -27,7 +29,9 @@
     <% if user != current_user %>
       <div class="user-card">
         <div class="user-card-info">
-          <div class="small-card-user-avatar"></div>
+          <div class="small-card-user-avatar">
+            <%= cl_image_tag user.avatar, crop: :thumb %>
+          </div>
           <p>
             <%= user.first_name %> <%= user.last_name %>
           </p>
