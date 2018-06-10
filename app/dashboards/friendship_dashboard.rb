@@ -47,7 +47,6 @@ class FriendshipDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :user,
     :friend,
-    :friend_id,
     :relationship,
   ].freeze
 

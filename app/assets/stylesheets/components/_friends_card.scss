@@ -1,0 +1,200 @@
+.friends-cards-container {
+    margin: 10px 0;
+    margin-left: 25px;
+    height: 100%;
+}
+
+.hide {
+  display: none;
+
+}
+
+
+.friends-card-front {
+  transition: 1s;
+}
+
+.front-shadow {
+  box-shadow: 1px 1px 3px RGBA(90, 90, 90, 0.4);
+  transition: 1s;
+}
+
+
+.blurred {
+  color: transparent;
+  text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.friends-card {
+  position: relative;
+  border-radius: 10px;
+  height: 180px;
+  width: 160px;
+  background-color: white;
+  margin: 10px 6px;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.friends-card.flipped {
+  transform: rotateY(-180deg);
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+
+}
+
+.friends-card-user-avatar {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  background-color: gray;
+  position: absolute;
+  top: 35px;
+  left: 44px;
+}
+
+.friends-card-user-name {
+  position: absolute;
+  width: 140px;
+  top: 125px;
+  left: 10px;
+  p {
+    font-size: 18px;
+    text-shadow: 0.3px 0.3px 1px rgba(0, 0, 0, 0.25);
+  }
+}
+
+// .friends-card-user-relationship {
+//   position: absolute;
+//   width: 140px;
+//   top: 135px;
+//   left: 10px;
+//   p {
+//     font-size: 13px;
+//     font-weight: lighter;
+//   }
+// }
+
+.friends-card-corner-button {
+  position: absolute;
+  width: 31.111px;
+  height: 35px;
+  border-top-left-radius: 46px;
+  border-bottom-right-radius: 130px;
+  background-color: #548F65;
+  top: 0px;
+  left: 0px;
+  transition: 2s;
+}
+
+.friends-card-big-corner-button {
+  position: absolute;
+  width: 160px;
+  height: 180px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 145px;
+  background-color: #548F65;
+  top: 0px;
+  left: 0px;
+}
+
+.friends-card-front-arrow {
+  position: absolute;
+  top: 162px;
+  left: 140px;
+  font-size: 10px;
+  transition: 1s;
+  img {
+    width: 15px;
+    opacity: 0.6;
+  }
+
+}
+.friends-card-main-hidden {
+  opacity: 0;
+  transition: 1s;
+}
+
+.friends-card-hazard-warnings {
+  position: absolute;
+  top: 20px;
+  left: 15px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0.9;
+    img {
+      width: 20px;
+      margin: 8px;
+    }
+    p {
+      margin: 0;
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: lighter;
+      font-size: 12px;
+    }
+}
+
+.friends-card-hazard-warnings-appear {
+  opacity: 1;
+  transition: 3s;
+}
+
+
+.friends-card-back-arrow {
+ position: absolute;
+  top: 162px;
+  right: 140px;
+  font-size: 10px;
+  transition: 1s;
+  img {
+    width: 15px;
+    opacity: 0.6;
+  }
+}
+
+.friends-card-back {
+  transition: 2s;
+  -moz-transform: scale(-1, 1);
+-webkit-transform: scale(-1, 1);
+-o-transform: scale(-1, 1);
+-ms-transform: scale(-1, 1);
+transform: scale(-1, 1);
+}
+
+.hide-back-content {
+  opacity: 0;
+  transition: 1s;
+}
+
+
+.back-shadow {
+  box-shadow: -1px 1px 3px RGBA(90, 90, 90, 0.4);
+  transition: 1s;
+}
+
+.friends-card-actions {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  flex-direction: column;
+  opacity: 0.9;
+    img {
+      height: 20px;
+      margin: 8px;
+    }
+    p {
+      margin:15px;
+      color: #7696CA;
+      font-weight: lighter;
+      font-size: 12px;
+    }
+}
+
+
+.edit-appears {
+  opacity: 0.6;
+}
+
