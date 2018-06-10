@@ -11,10 +11,9 @@ class Hazard < ApplicationRecord
     people_nearby.each do |user|
       HazardNotification.create(user: user, hazard: self)
       user.update(state: :in_danger_zone)
-      raise
-      user.friendships.each do |friend|
-        HazardNotification.create(user: friend, hazard: self)
-      end
+      # user.friendships.each do |friend|
+      #   HazardNotification.create(user: friend, hazard: self)
+      # end
     end
   end
 end
