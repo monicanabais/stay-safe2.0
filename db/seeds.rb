@@ -1,3 +1,4 @@
+HazardNotification.destroy_all
 User.destroy_all
 
 users = [
