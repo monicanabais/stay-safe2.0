@@ -1,47 +1,49 @@
-<div class="form-container">
-  <div class="page-intro">
-    <p>Find your family and friends</p>
-  </div>
-  <div class="search-form user_first_name">
-    <%= form_tag(users_path, method: :get) do %>
+<div class="add-friends-top-page">
+  <div class="form-container">
+    <div class="page-intro add-friend">
+      <p>Find your family and friends</p>
+    </div>
+    <div class="search-form user_first_name">
+      <%= form_tag(users_path, method: :get) do %>
       <%= text_field_tag :query, params[:query], class: "form-control", id: "user_first_name",placeholder: "Search" %>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
 <div class="user-card-container">
-<% if @friends.any? %>
+  <% if @friends.any? %>
   <% @friends.each do |friend| %>
-    <% @users.each do |user| %>
-      <% if user != current_user && user != friend %>
-        <div class="user-card">
-          <div class="user-card-info">
-            <div class="small-card-user-avatar">
-              <%= cl_image_tag user.avatar, crop: :thumb %>
-            </div>
-            <p>
-              <%= user.first_name %> <%= user.last_name %>
-            </p>
-          </div>
-          <%= link_to 'Add', user_friend_requests_path(user), method: :post,  class: "user-card-button" %>
-        </div>
-      <% end %>
-    <% end %>
-  <% end %>
-<% else %>
   <% @users.each do |user| %>
-    <% if user != current_user %>
-      <div class="user-card">
-        <div class="user-card-info">
-          <div class="small-card-user-avatar">
-            <%= cl_image_tag user.avatar, crop: :thumb %>
-          </div>
-          <p>
-            <%= user.first_name %> <%= user.last_name %>
-          </p>
-        </div>
-        <%= link_to 'Add', user_friend_requests_path(user), method: :post,  class: "user-card-button" %>
-      </div>
-    <% end %>
+  <% if user != current_user && user != friend %>
+  <div class="user-card">
+    <div class="small-card-user-avatar">
+      <%= cl_image_tag user.avatar, crop: :thumb %>
+    </div>
+    <div class="user-card-info">
+      <p>
+        <%= user.first_name %> <%= user.last_name %>
+      </p>
+    </div>
+    <%= link_to 'Add', user_friend_requests_path(user), method: :post,  class: "user-card-button" %>
+  </div>
   <% end %>
-<% end %>
+  <% end %>
+  <% end %>
+  <% else %>
+  <% @users.each do |user| %>
+  <% if user != current_user %>
+  <div class="user-card">
+    <div class="user-card-info">
+      <div class="small-card-user-avatar">
+        <%= cl_image_tag user.avatar, crop: :thumb %>
+      </div>
+      <p>
+        <%= user.first_name %> <%= user.last_name %>
+      </p>
+    </div>
+    <%= link_to 'Add', user_friend_requests_path(user), method: :post,  class: "user-card-button" %>
+  </div>
+  <% end %>
+  <% end %>
+  <% end %>
 </div>
