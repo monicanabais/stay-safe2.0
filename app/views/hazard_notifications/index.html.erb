@@ -1,11 +1,18 @@
 <h1>Your Notifications</h1>
 
-<% @hazard_notifications.each do |hazard_notification| %>
-  <% if hazard_notification.user == current_user %>
-  <p>You are <%= current_user.state %></p>
-  <% elsif hazard_notification.user.friends == current_user.friends_notified %>
-  <p>Your <%= @user.relationship %> <%= @user.friendship.first_name @user.friendship.last_name%> is <%= @user.friendship.state %> </p>
+<% @my_hazard_notifications.each do |hazard_notification| %>
+  <%= hazard_notification.id %>
+  <p>You are in a danger zone! </p>
+  <%= hazard_notification.user %>
+
+
 <% end %>
+
+<% @friend_hazard_notifications.each do |hazard_notification| %>
+<p>Your friend is in danger</p>
 <% end %>
+
+
+
 
 <!-- HOW TO UPDATE NOTIFICATION STATUS? 'YOUR FRIEND IS SAFE' ? -->

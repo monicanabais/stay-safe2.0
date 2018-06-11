@@ -10,9 +10,9 @@ class User < ApplicationRecord
   has_many :pending_friends, through: :friend_requests, source: :friend
   has_many :friendships, dependent: :destroy
   has_many :friends, through: :friendships
+  has_many :hazard_notifications
 
   enum state: [:safe, :in_danger_zone, :outside_danger_zone]
-
 
   has_many :current_locations, dependent: :destroy
 
@@ -29,15 +29,16 @@ class User < ApplicationRecord
       self.friends.destroy(friend)
     end
 
-    def friends_notified
-      self.friendships._select! do |friend|
-        HazardNotification.where(user: friend).map(&:user).include? self.friendships
-      end
-    end
+    # def friends_notified
+    #   self.friendships._select! do |friend|
+    #     HazardNotification.where(user: friend).map(&:user).include? self.friendships
+    #   end
+    # end
 
     def friendship_with(friend)
       Friendship.where(user:self, friend:friend).first
     end
+
   end
 
 
