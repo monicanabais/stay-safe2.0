@@ -7,8 +7,8 @@ document.app = {
 }
 
 
-// import { extendCornerButton } from '../components/card';
-// extendCornerButton();
+import { extendCornerButton } from '../components/cards';
+extendCornerButton();
 
 
 // import { clickOnButtonArrowToEditAndDelete } from '../components/adminCard';

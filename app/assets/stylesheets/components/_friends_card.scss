@@ -5,11 +5,6 @@
   padding-bottom: 50px;
 }
 
-.hide {
-  display: none;
-
-}
-
 .friends-cards-row {
   margin: 0 !important;
 }
@@ -40,11 +35,12 @@
   padding: 0;
 }
 
+
+
 .friends-card.flipped {
   transform: rotateY(-180deg);
   transition: transform 0.5s;
   transform-style: preserve-3d;
-
 }
 
 .friends-card-user-avatar img{
@@ -88,7 +84,7 @@
   background-color: #548F65;
   top: 0px;
   left: 0px;
-  transition: 2s;
+  transition: 1s;
 }
 
 .friends-card-big-corner-button {
@@ -102,6 +98,7 @@
   background-color: #548F65;
   top: 0px;
   left: 0px;
+  transition: 1s;
 }
 
 .friends-card-front-arrow {
@@ -137,8 +134,16 @@
       color: rgba(255, 255, 255, 0.9);
       font-weight: lighter;
       font-size: 12px;
+
+    }
+
+    .friends-card-hazard-warnings-container {
+      display: flex;
+      justify-content: space-between;
     }
 }
+
+
 
 .friends-card-hazard-warnings-appear {
   opacity: 1;

@@ -1,0 +1,13 @@
+<div class="notifications-tab-container">
+    <div class="notifications-tab friends <%= 'pressed' if action_name == "index" && controller_name == "friend_requests" %>">
+      <%= link_to friend_requests_path do %>
+        <p>Friends</p>
+      <% end %>
+    </div>
+    <div class="notifications-tab hazards <%= 'pressed' if action_name == "index" && controller_name == "hazard_notifications" %>">
+      <%= link_to hazard_notifications_path do %>
+        <p>Hazards</p>
+      <% end %>
+    </div>
+
+</div>

@@ -3,7 +3,7 @@
 
 <div class="col-xs-6 col-md-6 ">
 
-  <div class="friends-card">
+  <div class="friends-card front-shadow">
 
     <div class="friends-card-front">
 
@@ -14,7 +14,7 @@
         </div>
 
         <div class="friends-card-user-name">
-          <p class="text-center"><%= friend.first_name %> <%= friend.last_name %></p>
+          <p class="friends-card-user-name-text text-center"><%= friend.first_name %> <%= friend.last_name %></p>
         </div>
       </div>
 
@@ -25,9 +25,18 @@
       <div class="friends-card-button-content">
         <div class="friends-card-corner-button"></div>
         <div class="friends-card-hazard-warnings hidden">
-          <p><%= image_tag 'cards_fire.svg' %> Kind</p>
-          <p><%= image_tag 'cards_location.svg' %> Location</p>
-          <p><%= image_tag 'cards_loading.svg' %> Status</p>
+          <div class="friends-card-hazard-warnings-container">
+            <p><%= image_tag 'cards_fire.svg' %> Kind</p>
+          </div>
+           <div class="friends-card-hazard-warnings-container">
+            <p><%= image_tag 'cards_location.svg' %> Location</p>
+          </div>
+           <div class="friends-card-hazard-warnings-container">
+            <p><%= image_tag 'cards_loading.svg' %> Status</p>
+          </div>
+
+
+
         </div>
       </div>
 

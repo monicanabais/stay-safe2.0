@@ -1,52 +1,67 @@
-.friend-request-button {
-  width: 80px;
-  border-radius: 27.5px;
-  height: 30px;
-  text-align: center;
-  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
-  background-color: #608ACA;
-  margin: 5px 5px;
-  padding-top: 1px;
-  a {
-    color: white;
-    font-size: 16px;
-    &:hover {
-      text-decoration: none;
-      color: white;
-    }
-  }
-}
-.friend-request {
-  width: 350px;
-  height: 100px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.notifications-container {
+  width: 390px;
   margin: 0 auto;
-  background-color: #dbd9d9;
-  margin-bottom: 5px;
-  .friend-request-status {
-    height: 60px;
-    width: 10px;
-    border-radius: 50px;
-  }
-  .inactive {
-  background-color: gray;
-  }
-  .active {
-  background-color: #58C8D7;
-  }
-  .friend-request-content {
-    width: 325px;
-    height: 80px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: white;
-    border-radius: 5px;
-    p {
-      margin-left: 5px;
-      margin-bottom: 0;
-    }
+  padding-bottom: 50px;
+  margin-top: 58px;
+
+}
+
+.card-notifications {
+  display: flex;
+  // height: 100px;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 370px;
+  align-items: center;
+  margin-bottom: 10px;
+  // background-color: #DBD9D9;
+
+}
+
+.card-notification-sidebar {
+  width: 10px;
+  height: 60px;
+  background-color: #E2E1E1;
+  border-radius: 50px;
+}
+
+.card-notifications-content {
+  width: 345px;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  background-color: white;
+  p {
+    margin-bottom: 0;
+    margin-left: 15px;
+    font-size: 15px;
+    font-weight: lighter;
   }
 }
+
+.small-notifications-card-user-avatar img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: gray;
+}
+
+.friend-request-notification-buttons {
+  display: flex;
+  flex-direction: column;
+  width: 60px;
+  height: 80px;
+  padding: 10px 0;
+  justify-content: space-between;
+}
+
+.friend-request-notification-button {
+  border-radius: 27.5px;
+  text-align: center;
+  img {
+    width: 30px;
+  }
+}
+

@@ -17,8 +17,8 @@ function rotateCards() {
       frontArrow.addEventListener('click', (event) => {
       console.log('worked')
         card.classList.toggle('flipped');
-        // card.classList.toggle('front-shadow');
-        // card.classList.toggle('back-shadow');
+        card.classList.remove('front-shadow')
+        card.classList.add('back-shadow');
         front.classList.add('hide');
         back.classList.remove('hide');
       });
@@ -27,8 +27,8 @@ function rotateCards() {
       backArrow.addEventListener('click', (event) => {
       console.log('worked')
         card.classList.toggle('flipped');
-        // card.classList.toggle('back-shadow');
-        // card.classList.toggle('front-shadow');
+        card.classList.remove('back-shadow')
+        card.classList.add('front-shadow');
         back.classList.add('hide')
         front.classList.remove('hide')
       });
@@ -38,18 +38,18 @@ function rotateCards() {
 }
 
 function extendCornerButton() {
-  const cards = document.querySelectorAll('.joke-card');
+  const cards = document.querySelectorAll('.friends-card');
   cards.forEach((card) => {
-    const cornerButton = card.querySelector('.corner-button');
-    const jokeBody = card.querySelector('.card-main');
-    const jokeAnswer = card.querySelector('.joke-answer');
+    const cornerButton = card.querySelector('.friends-card-corner-button');
+    const frontMainInfo = card.querySelector('.friends-card-front-main-info');
+    const buttonContent = card.querySelector('.friends-card-hazard-warnings');
 
 
     if (cornerButton) {
     cornerButton.addEventListener('click', (event) => {
-      event.currentTarget.classList.toggle('big-corner-button');
-      jokeBody.classList.toggle('card-main-hidden');
-      jokeAnswer.classList.toggle('joke-answer-appear');
+      event.currentTarget.classList.toggle('friends-card-big-corner-button');
+      frontMainInfo.classList.toggle('hidden');
+      buttonContent.classList.toggle('hidden');
     });
     }
   })

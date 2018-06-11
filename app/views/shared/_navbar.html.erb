@@ -47,8 +47,8 @@
   </div>
 
   <div class="navbar-button notifications">
-    <%= link_to friend_requests_path do %>
-      <svg class="navbar-icon <%= "active" if action_name == "index" && controller_name == "hazard_notifications" %>" width="170px" height="170px" viewBox="0 0 170 170" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <%= link_to hazard_notifications_path do %>
+      <svg class="navbar-icon <%= "active" if action_name == "index" && controller_name == "hazard_notifications" || action_name == "index" && controller_name == "friend_requests"%>" width="170px" height="170px" viewBox="0 0 170 170" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
         <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
           <path d="M164.643494,121.543027 C156.20041,114.155332 145.714291,104.961055 145.714291,69.0625 C145.714291,42.7012109 123.769485,20.8286523 94.9939394,16.6580078 C96.3963333,14.8856926 97.1461297,12.7806561 97.1428464,10.625 C97.1428464,4.75701172 91.7062598,0 84.9999852,0 C78.2937107,0 72.8571241,4.75701172 72.8571241,10.625 C72.8571241,12.8662109 73.652102,14.9440625 75.006031,16.6580078 C46.2304858,20.8286523 24.2856795,42.7012109 24.2856795,69.0625 C24.2856795,104.961055 13.7961448,114.155332 5.35306163,121.543027 C-6.08741089,131.553438 2.02060517,148.75 18.2324632,148.75 L60.7142629,148.75 C60.7142629,151.709423 61.4056671,154.527557 62.6548446,157.087473 C64.3796799,160.622147 67.1679349,163.664519 70.6678251,165.906779 C74.6849925,168.48044 79.639697,170 84.9999852,170 C93.3966771,170 100.798145,166.271295 105.15967,160.603014 C107.765076,157.217003 109.285708,153.138874 109.285708,148.75 L151.764092,148.75 C167.943696,148.75 176.107113,131.573691 164.643494,121.543027 Z" id="Shape" fill="#91A5C3" fill-rule="nonzero"></path>

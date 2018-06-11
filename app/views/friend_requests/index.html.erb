@@ -1,22 +1,23 @@
-<div class="page-intro">
-  <p>Friend requests</p>
+<div class="notifications-container">
+  <%= render "components/friend_requests_notifications_cards" %>
 </div>
-<% @incoming.each do |d| %>
+<!--
+<%# @incoming.each do |d| %>
   <div class="friend-request">
     <div class="friend-request-status active"> </div>
     <div class="friend-request-content">
       <div class="user-card-info">
         <div class="small-card-user-avatar"></div>
         <p>
-          <%= User.find(d.user_id).first_name %> <%= User.find(d.user_id).last_name %>
+          <%#= User.find(d.user_id).first_name %> <%#= User.find(d.user_id).last_name %>
         </p>
       </div>
       <div class="friend-request-buttons">
         <div class="friend-request-button">
-          <%= link_to "Accept", friend_request_path(d), method: :patch %>
+          <%#= link_to "Accept", friend_request_path(d), method: :patch %>
         </div>
         <div class="friend-request-button">
-          <%= link_to "Decline", friend_request_path(d), method: :delete %>
+          <%#= link_to "Decline", friend_request_path(d), method: :delete %>
         </div>
       </div>
     </div>
