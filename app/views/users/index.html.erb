@@ -8,6 +8,7 @@
     <% end %>
   </div>
 </div>
+<div class="user-card-container">
 <% if @friends.any? %>
   <% @friends.each do |friend| %>
     <% @users.each do |user| %>
@@ -43,3 +44,4 @@
     <% end %>
   <% end %>
 <% end %>
+</div>

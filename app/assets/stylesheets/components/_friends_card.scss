@@ -1,7 +1,8 @@
 .friends-cards-container {
-    margin: 10px 0;
-    margin-left: 25px;
-    height: 100%;
+  min-height: 533px;
+  width: 100vw;
+  margin: 0 auto;
+  padding-bottom: 50px;
 }
 
 .hide {
@@ -9,6 +10,9 @@
 
 }
 
+.friends-cards-row {
+  margin: 0 !important;
+}
 
 .friends-card-front {
   transition: 1s;
@@ -19,7 +23,6 @@
   transition: 1s;
 }
 
-
 .blurred {
   color: transparent;
   text-shadow: 0 0 5px rgba(0,0,0,0.5);
@@ -29,11 +32,12 @@
   position: relative;
   border-radius: 10px;
   height: 180px;
-  width: 160px;
+  // width: 160px;
   background-color: white;
-  margin: 10px 6px;
+  margin: 10px 0;
   transition: transform 0.5s;
   transform-style: preserve-3d;
+  padding: 0;
 }
 
 .friends-card.flipped {
@@ -43,14 +47,14 @@
 
 }
 
-.friends-card-user-avatar {
+.friends-card-user-avatar img{
   border-radius: 50%;
-  width: 70px;
-  height: 70px;
+  width: 90px;
+  height: 90px;
   background-color: gray;
   position: absolute;
-  top: 35px;
-  left: 44px;
+  top: 30px;
+  left: 35px;
 }
 
 .friends-card-user-name {
