@@ -1,5 +1,7 @@
 <div class="form-container">
-  <h3>Find your family and friends</h3>
+  <div class="page-intro">
+    <p>Find your family and friends</p>
+  </div>
   <div class="search-form user_first_name">
     <%= form_tag(users_path, method: :get) do %>
       <%= text_field_tag :query, params[:query], class: "form-control", id: "user_first_name",placeholder: "Search" %>
