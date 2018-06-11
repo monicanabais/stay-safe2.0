@@ -10,6 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 2018_06_11_162135) do
 
   # These are extensions that must be enabled in order to support this database
@@ -54,8 +55,11 @@ ActiveRecord::Schema.define(version: 2018_06_11_162135) do
     t.bigint "hazard_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "status", default: 0
+    t.bigint "notifiee_id"
     t.boolean "read", default: false
     t.index ["hazard_id"], name: "index_hazard_notifications_on_hazard_id"
+    t.index ["notifiee_id"], name: "index_hazard_notifications_on_notifiee_id"
     t.index ["user_id"], name: "index_hazard_notifications_on_user_id"
   end
 

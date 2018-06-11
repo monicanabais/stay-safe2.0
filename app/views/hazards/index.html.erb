@@ -1,11 +1,14 @@
 <h1>Current Hazards</h1>
 
-<!-- <%# @hazards.each do |hazard| %>
-  <p><%#= hazard.kind %></p>
-  <p><%#= hazard.location %></p>
+<% @hazards.each do |hazard| %>
+<div class="hazards">
+  <p><%= hazard.kind %></p>
+  <p><%= hazard.location %></p>
   <p><%#= hazard.latitude %></p>
   <p><%#= hazard.longitude %></p>
-  <p><%#= hazard.status %></p>
-<%# end %>
+  <p><%= hazard.status %></p>
+</div>
+<% end %>
 
- -->
+
+

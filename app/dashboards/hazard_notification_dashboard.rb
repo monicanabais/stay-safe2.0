@@ -10,9 +10,12 @@ class HazardNotificationDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     user: Field::BelongsTo,
     hazard: Field::BelongsTo,
+    notifiee: Field::BelongsTo.with_options(class_name: "User"),
     id: Field::Number,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
+    status: Field::String,
+    notifiee_id: Field::Number,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -23,8 +26,8 @@ class HazardNotificationDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :user,
     :hazard,
+    :notifiee,
     :id,
-    :created_at,
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -32,9 +35,12 @@ class HazardNotificationDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :user,
     :hazard,
+    :notifiee,
     :id,
     :created_at,
     :updated_at,
+    :status,
+    :notifiee_id,
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -43,6 +49,8 @@ class HazardNotificationDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :user,
     :hazard,
+    :notifiee,
+    :status,
   ].freeze
 
   # Overwrite this method to customize how hazard notifications are displayed
