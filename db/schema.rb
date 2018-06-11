@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(version: 2018_06_11_095351) do
     t.bigint "hazard_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "status", default: "0"
+    t.integer "status", default: 0
     t.bigint "notifiee_id"
     t.index ["hazard_id"], name: "index_hazard_notifications_on_hazard_id"
     t.index ["notifiee_id"], name: "index_hazard_notifications_on_notifiee_id"

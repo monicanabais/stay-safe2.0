@@ -6,5 +6,5 @@ class HazardNotification < ApplicationRecord
   #enum status: [:in_danger_zone, :safe, :outside_danger_zone]
   enum status: [:active, :inactive]
 
-  #scope :active, -> { where(status: :in_danger_zone)}
+  scope :active, -> { where(status: :active)}
 end
