@@ -26,5 +26,6 @@ Rails.application.routes.draw do
     resources :friend_requests
     resources :friendships
     resources :current_locations
+    resources :hazard_notifications
   end
 end
