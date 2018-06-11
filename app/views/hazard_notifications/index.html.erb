@@ -1,3 +1,4 @@
+
 <h1>Your Notifications</h1>
 
 <% @my_hazard_notifications.each do |hazard_notification| %>
@@ -13,4 +14,9 @@
 <%# end %>
 <% end %>
 
+
+
+<div class="notifications-container">
+  <%= render "components/hazard_notifications" %>
+</div>
 

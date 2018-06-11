@@ -1,0 +1,28 @@
+
+<% @incoming.each do |d| %>
+<div class="card-notifications">
+  <div class="card-notification-sidebar"></div>
+  <div class="card-notifications-content">
+    <div class="user-card-info">
+      <div class="small-notifications-card-user-avatar">
+        <%= cl_image_tag User.find(d.user_id).avatar, crop: :thumb %>
+      </div>
+      <p>
+        <%= User.find(d.user_id).first_name %> <%= User.find(d.user_id).last_name %> wants to add you as a friend
+      </p>
+    </div>
+    <div class="friend-request-notification-buttons">
+      <div class="friend-request-notification-button">
+        <%= link_to friend_request_path(d), method: :patch do %>
+        <%= image_tag 'notifications_accept.svg' %>
+        <% end %>
+      </div>
+      <div class="friend-request-notification-button">
+        <%= link_to friend_request_path(d), method: :delete do %>
+        <%= image_tag 'notifications_decline.svg' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

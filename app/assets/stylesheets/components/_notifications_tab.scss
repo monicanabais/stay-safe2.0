@@ -1,0 +1,42 @@
+.notifications-tab-container {
+  position: fixed !important;
+  top: 0;
+  width: 100vw;
+  background-color: #E7E7E7;
+  display: flex;
+  height: 47px;
+  align-items: center;
+  box-shadow: -0.5px 0 1px rgba(0,0,0,0.5);
+}
+
+.notifications-tab {
+  width: 50vw;
+  margin: 0 auto;
+  &.friends {
+    position: absolute;
+    left: 0;
+  }
+  &.hazards {
+    position: absolute;
+    right: 0;
+  }
+  p {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+    color: rgba(0,0,0,0.4);
+    height: 47px;
+    padding-top: 9px;
+  }
+  a {
+    text-decoration: none;
+  }
+}
+
+.pressed {
+  border-bottom: 1px solid black;
+  p {
+    font-weight: 400;
+    color: black;
+  }
+}

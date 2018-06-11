@@ -1,0 +1,107 @@
+.picture-background {
+  background: linear-gradient(21deg, RGBA(61, 130, 224, 0.96) 25%, RGBA(41, 135, 81, 0.76) 56%),image-url('landing_page_background.svg');
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  width: 100vw;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: flex-start;
+  // align-items: center;
+  // align-content: space-between;
+}
+
+.landing-more-info-button {
+  border-radius: 50px;
+  width: 140px;
+  height: 25px;
+  font-size: 15px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: lighter;
+  margin: 0;
+  margin-top: 10px;
+  display: inline-block;
+  padding: 1px 0;
+}
+
+.landing-more-info {
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  top: 13%;
+  width: 80%;
+  height: 80%;
+  left: 10%;
+  p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 20px;
+    font-weight: lighter;
+  }
+}
+
+.blurred {
+  color: transparent;
+  text-shadow: 0 0 5px rgba(255,255,255,0.3) !important;
+}
+
+.landing-logo {
+  font-family: $logo;
+  font-size: 71px;
+  font-weight: bold;
+  line-height: 82px;
+  letter-spacing: 1.42px;
+  color: #EBF2F0;
+  margin: 0;
+  margin-top: 75px;
+  // margin-top: 218px;
+  // margin-left: -57px
+}
+
+// .landing-logo-two-point-oh {
+//   font-size: 23px;
+//   line-height: 82px;
+//   letter-spacing: 2.72px;
+//   font-family: $logo;
+//   color: #EBF2F0;
+//   margin: 0;
+//   margin-top: -18px;
+//   font-weight: 400;
+// }
+
+.landing-description {
+  font-family: $body-font;
+  font-size: 25px;
+  font-weight: lighter;
+  line-height: 1.13;
+  color: #ffffff;
+  margin: 0;
+  padding: 0 20px;
+  margin-top: 100px;
+  // display: inline-block;
+  // position: absolute;
+  // margin-left: -192px;
+}
+
+.landing-start-button {
+  // margin-top: 476px;
+  // margin-left: -140px;
+  // position: absolute;
+  padding: 11.5px 0;
+  margin-top: 160px;
+  height: 55px;
+  width: 315px;
+  border-radius: 50px;
+  background-color: #2267C3;
+  color: white;
+  font-size: 22px;
+  font-weight: lighter;
+  font-family: $body-font;
+  opacity: 0.8;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  border: none;
+  display: inline-block;
+}
