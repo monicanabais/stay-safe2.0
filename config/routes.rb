@@ -20,6 +20,8 @@ Rails.application.routes.draw do
   resources :current_locations, only: [:create]
   resources :hazards, only: :index
 
+  post :mark_as_safe, to: 'hazard_notifications#mark_as_safe'
+
   namespace :admin do
     resources :hazards
     resources :users
