@@ -1,0 +1,11 @@
+ <div class="user-card">
+  <div class="user-card-info">
+    <div class="small-card-user-avatar">
+      <%= cl_image_tag user.avatar, crop: :thumb %>
+    </div>
+    <p>
+      <%= user.first_name %> <%= user.last_name %>
+    </p>
+  </div>
+  <%= link_to 'Add', user_friend_requests_path(user), method: :post,  class: "user-card-button" %>
+</div>

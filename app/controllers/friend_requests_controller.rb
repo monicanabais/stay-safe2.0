@@ -7,8 +7,8 @@ class FriendRequestsController < ApplicationController
   end
 
   def index
-    @incoming = FriendRequest.where(friend: current_user)
-    @outgoing = current_user.friend_requests
+    @incoming = FriendRequest.where(friend: current_user).where(accepted: false)
+    @outgoing = current_user.friend_requests.where(accepted: true)
   end
 
   def new
@@ -31,14 +31,13 @@ class FriendRequestsController < ApplicationController
   end
 
   def update
+    @friend_request.update(accepted: true)
     @friend_request.accept
-
     redirect_to friend_requests_path, notice: "You are now friends with #{@friend_request.user.first_name} #{@friend_request.user.last_name}"
   end
 
   def destroy
     @friend_request.destroy
-
     redirect_to friend_requests_path
   end
 
