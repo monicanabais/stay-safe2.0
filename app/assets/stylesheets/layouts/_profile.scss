@@ -4,13 +4,6 @@
   overflow: auto;
 }
 
-.page-intro {
-  margin-top: 30px;
-  p {
-    text-shadow: 0.3px 0.3px 1px rgba(0, 0, 0, 0.25);
-    font-size: 22px;
-  }
-}
 
 .profile-avatar img {
   border-radius: 50%;
@@ -46,6 +39,15 @@
   &:focus {
     background-color: #56bf7e;
   }
+  a {
+      outline: 0;
+  }
+    a:active {
+      outline: 0;
+    }
+    a:focus {
+      outline: 0;
+    }
 }
 
 .edit {

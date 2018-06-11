@@ -13,7 +13,10 @@
     <div class="container">
     <%= render 'shared/flashes' %>
     <%= yield %>
-    <%= render 'shared/navbar' %>
+
+    <%= render 'shared/navbar' if current_user %>
+
+
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
     <%= yield :after_js %>

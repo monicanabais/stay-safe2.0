@@ -1,6 +1,6 @@
 .form-container {
   width: 315px;
-  margin: 0 auto;
+  margin: 30px auto;
   text-align: center;
   h3 {
     padding-bottom: 30px;
@@ -14,14 +14,48 @@
   }
 }
 
-#user_email, #user_password, #user_password_confirmation, #user_current_password, #user_first_name, #user_last_name {
-  background-color: #F4F4F4;
-  border: none;
-  box-shadow: none;
+.sign-in-logo {
+  margin-top: 110px !important;
 }
 
-.user_email, .user_password, .user_password_confirmation, .user_current_password, .user_first_name, .user_last_name {
-  border-bottom: 1px solid black;
+.sign-in {
+  margin: 0 auto;
+  margin-top: 70px;
+}
+
+#user_email, #user_password {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  color: white;
+  font-weight: lighter;
+}
+
+#user_password_confirmation, #user_current_password, #user_first_name, #user_last_name {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  color: rgba(0,0,0,0.8);
+  font-weight: lighter;
+}
+
+#user_email::placeholder {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+#user_password::placeholder {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+.user_email, .user_password {
+  border-bottom: 1px solid rgba(255,255,255,0.6);
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.user_password_confirmation, .user_current_password, .user_first_name, .user_last_name {
+  border-bottom: 1px solid rgba(0,0,0,0.8);
   display: flex;
   align-items: center;
   margin-bottom: 20px;
@@ -34,26 +68,68 @@
   background-image: image-url('icons/user.svg');
 }
 .lock-icon {
-  background-image: image-url('icons/padlock.svg');
+  background-image: image-url('form_password.svg');
 }
 .envelope-icon {
-  background-image: image-url('icons/envelope.svg');
+  background-image: image-url('form_email.svg');
 }
 
 .icons {
-  width: 20px;
+  width: 30px;
   height: 19px;
   background-size: cover;
   font-size: 1px;
+  margin: 0;
 }
 
 .form-button {
   width: 315px;
   border-radius: 27.5px;
   height: 55px;
-  margin: 20px 0 20px 0;
-  border: 1px solid #dcdada;
+  margin: 20px 0;
   transition: 0.5s;
+  background-color: #58C8D7;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-weight: lighter;
 }
+
+.sign-in-forgot-password {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: lighter;
+  font-size: 16px;
+  margin: 0;
+  margin-top: -9px;
+}
+
+.sign-in-facebbok {
+  width: 315px;
+  height: 55px;
+  border-radius: 27.5px;
+  margin: 0;
+  margin-top: 40px;
+  transition: 0.5s;
+  background-color: #406EBB;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  padding: 15px 0;
+  color: white;
+  font-weight: lighter;
+}
+
+.sign-in-sign-up {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: lighter;
+  font-size: 16px;
+  margin: 0;
+  margin-top: 9px;
+  a {
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 18px;
+  }
+}
+
+
+
+
 
