@@ -11,10 +11,10 @@ class CurrentLocation < ApplicationRecord
 
     if hazards_nearby.present?
       hazards_nearby.each do |hazard|
+        self.user.friends.each do |friend|
+        HazardNotification.create(user: self.user, hazard: hazard, notifiee: friend)
         HazardNotification.create(user: self.user, hazard: hazard, notifiee: self.user)
         self.user.update(state: :in_danger_zone)
-        self.user.friends.each do |friend|
-          HazardNotification.create(user: self.user, hazard: hazard, notifiee: friend)
         end
       end
     end
