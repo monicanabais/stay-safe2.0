@@ -14,13 +14,16 @@ Rails.application.routes.draw do
     resources :friend_requests, only: [:create, :destroy]
   end
 
-  resources :friend_requests, except: [:show, :create]
+  resources :friend_requests, except: [:show, :create] do
+    patch :read
+  end
   resources :hazard_notifications, only: [:index, :create]
   resources :friendships, only: [:index, :update, :destroy]
   resources :current_locations, only: [:create]
   resources :hazards, only: :index
 
   post :mark_as_safe, to: 'hazard_notifications#mark_as_safe'
+
 
   namespace :admin do
     resources :hazards
