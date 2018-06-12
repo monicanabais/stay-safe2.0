@@ -1,21 +1,19 @@
 
-<h1>Your Notifications</h1>
-
-<% @my_hazard_notifications.each do |hazard_notification| %>
+<!-- <%# @my_hazard_notifications.each do |hazard_notification| %>
   <p>You are in a danger zone! </p>
-  <%= link_to "Mark yourself safe", mark_as_safe_path, method: :post, class: "btn btn-primary" %>
-<% end %>
+  <%#= link_to "Mark yourself safe", mark_as_safe_path, method: :post, class: "btn btn-primary" %>
+<%# end %>
 
-<% @friend_hazard_notifications.each do |hazard_notification| %>
+<%# @friend_hazard_notifications.each do |hazard_notification| %>
   <%# if hazard_notification.active? %>
     <p>Your friend is in danger</p>
   <%# else %>
-    <!-- <p>Your friend is safe</p> -->
+    <p>Your friend is safe</p>
 <%# end %>
-<% end %>
+<%# end %>
 
 
-
+ -->
 <div class="notifications-container">
   <%= render "components/hazard_notifications" %>
 </div>
