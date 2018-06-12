@@ -7,7 +7,11 @@
         <%= cl_image_tag User.find(d.user_id).avatar, crop: :thumb %>
       </div>
       <p>
-        <%= User.find(d.user_id).first_name %> <%= User.find(d.user_id).last_name %> wants to add you as a friend
+        <%= simple_form_for(d, :url => friend_request_read_path(d), method: :patch) do |f| %>
+        <%= f.hidden_field :read, :value => true %>
+        <%= f.button :submit, User.find(d.user_id).first_name + '' + User.find(d.user_id).last_name + 'wants to add you as a friend' , class: "read-notification-button" %>
+        <% end %>
+
       </p>
     </div>
     <div class="friend-request-notification-buttons">
@@ -25,3 +29,4 @@
   </div>
 </div>
 <% end %>
+

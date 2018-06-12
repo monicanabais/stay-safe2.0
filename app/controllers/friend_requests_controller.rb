@@ -35,6 +35,11 @@ class FriendRequestsController < ApplicationController
     @friend_request.accept
   end
 
+  def read
+    @friend_request.update(read: true)
+    redirect_to friend_requests_path
+  end
+
   def destroy
     @friend_request.destroy
     redirect_to friend_requests_path
@@ -43,6 +48,6 @@ class FriendRequestsController < ApplicationController
   private
 
   def set_friend_request
-    @friend_request = FriendRequest.find(params[:id])
+    @friend_request = FriendRequest.find(params[:id] || params[:friend_request_id])
   end
 end
