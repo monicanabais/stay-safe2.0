@@ -18,7 +18,7 @@
 .navbar-icon {
   height: 30px;
   width: 30px;
-  object-fit: contain;
+  object-fit: contain !important;
   &.active path {
     fill: #4D6CA0;
   }
