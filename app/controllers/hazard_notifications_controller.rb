@@ -26,11 +26,9 @@ class HazardNotificationsController < ApplicationController
     end
   end
 
-
   private
 
   def set_notifications
     @my_hazard_notifications = HazardNotification.active.where(user: current_user, notifiee: current_user)
   end
-
 end
