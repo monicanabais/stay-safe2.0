@@ -41,6 +41,11 @@ class FriendRequestsController < ApplicationController
     redirect_to friend_requests_path
   end
 
+  def read_by_friend
+    @friend_request.update(read_by_friend: true)
+    redirect_to friend_requests_path
+  end
+
   def destroy
     @friend_request.destroy
     redirect_to friend_requests_path

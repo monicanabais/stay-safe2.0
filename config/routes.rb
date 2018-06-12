@@ -16,6 +16,7 @@ Rails.application.routes.draw do
 
   resources :friend_requests, except: [:show, :create] do
     patch :read
+    patch :read_by_friend
   end
   resources :hazard_notifications, only: [:index, :create]
   resources :friendships, only: [:index, :update, :destroy]

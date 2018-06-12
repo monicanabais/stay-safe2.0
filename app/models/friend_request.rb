@@ -4,7 +4,6 @@ class FriendRequest < ApplicationRecord
   validates :user, presence: true
   validates :friend, presence: true, uniqueness: { scope: :user_id }
   validate :not_self
-  validate :not_friends
   validate :not_pending
 
   def accept
@@ -15,10 +14,6 @@ class FriendRequest < ApplicationRecord
 
   def not_self
     errors.add(:friend, "can't be equal to user") if user == friend
-  end
-
-  def not_friends
-    errors.add(:friend, 'is already added') if user.friends.include?(friend)
   end
 
   def not_pending
