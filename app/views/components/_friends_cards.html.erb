@@ -48,7 +48,6 @@
       </div>
 
       <div class="friends-card-actions">
-        <p><%= image_tag 'cards_edit.svg' %> Edit</p>
         <%= link_to friendship_path(current_user.friendship_with(friend)), method: :delete do %>
         <p><%= image_tag 'cards_delete.svg' %> Unfriend</p>
         <% end %>
