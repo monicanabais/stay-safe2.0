@@ -1,6 +1,6 @@
 .friends-cards-container {
   min-height: 533px;
-  width: 100vw;
+  width: 95vw;
   margin: 0 auto;
   padding-bottom: 50px;
 }
@@ -25,7 +25,7 @@
 
 .friends-card {
   position: relative;
-  border-radius: 10px;
+  border-radius: 5px;
   height: 180px;
   // width: 160px;
   background-color: white;
@@ -34,8 +34,6 @@
   transform-style: preserve-3d;
   padding: 0;
 }
-
-
 
 .friends-card.flipped {
   transform: rotateY(-180deg);
@@ -48,16 +46,13 @@
   width: 90px;
   height: 90px;
   background-color: gray;
-  position: absolute;
-  top: 30px;
-  left: 35px;
+  margin-top: 20px;
 }
 
 .friends-card-user-name {
-  position: absolute;
-  width: 140px;
-  top: 125px;
-  left: 10px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 9px;
   p {
     font-size: 18px;
     text-shadow: 0.3px 0.3px 1px rgba(0, 0, 0, 0.25);
@@ -79,7 +74,7 @@
   position: absolute;
   width: 31.111px;
   height: 35px;
-  border-top-left-radius: 46px;
+  border-top-left-radius: 25px;
   border-bottom-right-radius: 130px;
   background-color: #548F65;
   top: 0px;
@@ -89,11 +84,11 @@
 
 .friends-card-big-corner-button {
   position: absolute;
-  width: 160px;
+  width: 166.64px;
   height: 180px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 5px;
   border-bottom-right-radius: 145px;
   background-color: #548F65;
   top: 0px;
@@ -104,7 +99,7 @@
 .friends-card-front-arrow {
   position: absolute;
   top: 162px;
-  left: 140px;
+  left: 147px;
   font-size: 10px;
   transition: 1s;
   img {
@@ -154,7 +149,7 @@
 .friends-card-back-arrow {
  position: absolute;
   top: 162px;
-  right: 140px;
+  right: 147px;
   font-size: 10px;
   transition: 1s;
   img {
@@ -177,16 +172,15 @@ transform: scale(-1, 1);
   transition: 1s;
 }
 
-
 .back-shadow {
   box-shadow: -1px 1px 3px RGBA(90, 90, 90, 0.4);
   transition: 1s;
 }
 
 .friends-card-actions {
-  position: absolute;
-  top: 20px;
-  left: 20px;
+  // position: absolute;
+  // top: 20px;
+  // left: 20px;
   display: flex;
   flex-direction: column;
   opacity: 0.9;
@@ -195,13 +189,15 @@ transform: scale(-1, 1);
       margin: 8px;
     }
     p {
-      margin:15px;
+      margin:0 15px;
       color: #7696CA;
       font-weight: lighter;
-      font-size: 12px;
+      font-size: 18px;
+    }
+    a {
+      margin-top: 75px;
     }
 }
-
 
 .edit-appears {
   opacity: 0.6;
