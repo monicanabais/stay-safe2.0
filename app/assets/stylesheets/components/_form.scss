@@ -23,6 +23,14 @@
   margin-top: 70px;
 }
 
+#user_password_confirmation, #user_current_password, #user_first_name, #user_last_name, .edit-form #user_email, .edit-form #user_password {
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  color: rgba(0,0,0,0.8);
+  font-weight: lighter;
+}
+
 #user_email, #user_password {
   background-color: transparent;
   border: none;
@@ -31,20 +39,12 @@
   font-weight: lighter;
 }
 
-#user_password_confirmation, #user_current_password, #user_first_name, #user_last_name {
-  background-color: transparent;
-  border: none;
-  box-shadow: none;
-  color: rgba(0,0,0,0.8);
-  font-weight: lighter;
-}
-
-#user_email::placeholder {
+#user_email::placeholder, #user_password::placeholder {
   color: rgba(255, 255, 255, 0.4) !important;
 }
 
-#user_password::placeholder {
-  color: rgba(255, 255, 255, 0.4) !important;
+.edit-form #user_password::placeholder {
+  color: rgba(50,50,50,0.6) !important;
 }
 
 .user_email, .user_password {
@@ -54,7 +54,7 @@
   margin-bottom: 20px;
 }
 
-.user_password_confirmation, .user_current_password, .user_first_name, .user_last_name {
+.user_password_confirmation, .user_current_password, .user_first_name, .user_last_name, .edit-form .user_email, .edit-form .user_password {
   border-bottom: 1px solid rgba(0,0,0,0.8);
   display: flex;
   align-items: center;
