@@ -7,16 +7,19 @@
 <% end %>
 
 <% @friend_hazard_notifications.each do |hazard_notification| %>
-  <%# if hazard_notification.active? %>
+  <% if hazard_notification.active? %>
     <p>Your friend is in danger</p>
-  <%# else %>
-    <!-- <p>Your friend is safe</p> -->
+    <%# if hazard_notification.inactive? %>
+      <!-- <p>Your friend is safe</p> -->
+  <% else %>
+    <p>Your friend is safe</p>
 <%# end %>
+<% end %>
 <% end %>
 
 
 
-<div class="notifications-container">
-  <%= render "components/hazard_notifications" %>
+<!-- <div class="notifications-container">
+  <%#= render "components/hazard_notifications" %>
 </div>
-
+ -->

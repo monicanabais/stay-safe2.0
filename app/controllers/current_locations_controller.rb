@@ -7,4 +7,6 @@ class CurrentLocationsController < ApplicationController
     @location = CurrentLocation.create(latitude: params[:lat], longitude: params[:lng], user: current_user)
     render json: @location
   end
+
+
 end
