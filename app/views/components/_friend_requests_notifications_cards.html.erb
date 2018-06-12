@@ -1,7 +1,7 @@
 
 <% @incoming.each do |d| %>
 <div class="card-notifications">
-  <div class="card-notification-sidebar"></div>
+  <div class="card-notification-sidebar" id ="<%= 'unread' if read == false %>"></div>
   <div class="card-notifications-content">
     <div class="user-card-info">
       <div class="small-notifications-card-user-avatar">

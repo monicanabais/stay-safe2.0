@@ -33,7 +33,6 @@ class FriendRequestsController < ApplicationController
   def update
     @friend_request.update(accepted: true)
     @friend_request.accept
-    redirect_to friend_requests_path, notice: "You are now friends with #{@friend_request.user.first_name} #{@friend_request.user.last_name}"
   end
 
   def destroy

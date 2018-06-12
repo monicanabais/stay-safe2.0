@@ -12,11 +12,11 @@
 .notifications-tab {
   width: 50vw;
   margin: 0 auto;
-  &.friends {
+  &.friends-tab {
     position: absolute;
     left: 0;
   }
-  &.hazards {
+  &.hazards-tab {
     position: absolute;
     right: 0;
   }

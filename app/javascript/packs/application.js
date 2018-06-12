@@ -10,15 +10,6 @@ document.app = {
 import { extendCornerButton } from '../components/cards';
 extendCornerButton();
 
-
-// import { clickOnButtonArrowToEditAndDelete } from '../components/adminCard';
-// clickOnButtonArrowToEditAndDelete();
-
-
-// import { mouseoverEditAndDelete } from '../components/adminCard';
-// mouseoverEditAndDelete();
-
-
  import { rotateCards } from '../components/cards';
 rotateCards();
 
@@ -29,4 +20,5 @@ function fade_out() {
 }
 
 import { landingInfo } from '../components/landing'
-landingInfo()
+landingInfo();
+

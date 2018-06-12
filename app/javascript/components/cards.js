@@ -17,7 +17,7 @@ function rotateCards() {
       frontArrow.addEventListener('click', (event) => {
       console.log('worked')
         card.classList.toggle('flipped');
-        card.classList.remove('front-shadow')
+        card.classList.remove('front-shadow');
         card.classList.add('back-shadow');
         front.classList.add('hide');
         back.classList.remove('hide');
@@ -27,10 +27,10 @@ function rotateCards() {
       backArrow.addEventListener('click', (event) => {
       console.log('worked')
         card.classList.toggle('flipped');
-        card.classList.remove('back-shadow')
+        card.classList.remove('back-shadow');
         card.classList.add('front-shadow');
-        back.classList.add('hide')
-        front.classList.remove('hide')
+        back.classList.add('hide');
+        front.classList.remove('hide');
       });
     }
   })

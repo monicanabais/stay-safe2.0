@@ -8,13 +8,20 @@
 
 .card-notifications {
   display: flex;
-  // height: 100px;
   justify-content: space-between;
   margin: 0 auto;
   width: 370px;
   align-items: center;
   margin-bottom: 10px;
-  // background-color: #DBD9D9;
+  #unread {
+    background-color: #58C8D7;
+  }
+  #in-danger {
+    background-color: #DA2222;
+  }
+  #safe {
+    background-color: #298751;
+  }
 
 }
 
