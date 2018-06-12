@@ -1,44 +1,59 @@
-<%# @incoming.each do |d| %>
-<div class="card-notifications">
-  <div class="card-notification-sidebar"></div>
-  <div class="card-notifications-content">
-    <div class="user-card-info">
-      <div class="small-notifications-card-user-avatar">
-        <%#= cl_image_tag User.find(d.user_id).avatar, crop: :thumb %>
+<% @my_hazard_notifications.each do |hazard_notification| %>
+  <div class="card-notifications">
+    <div class="card-notification-sidebar"></div>
+    <div class="card-notifications-content">
+      <div class="user-card-info">
+        <div class="small-notifications-card-user-avatar">
+          <%#= cl_image_tag User.find(d.user_id).avatar, crop: :thumb %>
+        </div>
+          <p>You are in a danger zone! </p>
+          <%= link_to "Mark yourself safe", mark_as_safe_path, method: :post, class: "btn btn-primary" %>
       </div>
+      <div class="friend-request-notification-buttons">
+        <div class="friend-request-notification-button">
+          <%#= link_to friend_request_path(d), method: :patch do %>
+          <%#= image_tag 'notifications_accept.svg' %>
+          <%# end %>
+        </div>
+        <div class="friend-request-notification-button">
+          <%#= link_to friend_request_path(d), method: :delete do %>
+          <%#= image_tag 'notifications_decline.svg' %>
+          <%# end %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
 
-
-        <% @my_hazard_notifications.each do |hazard_notification| %>
-        <p>You are in a danger zone! </p>
-        <%= link_to "Mark yourself safe", mark_as_safe_path, method: :post, class: "btn btn-primary" %>
-        <% end %>
-
-
-        <% @friend_hazard_notifications.each do |hazard_notification| %>
+<% @friend_hazard_notifications.each do |hazard_notification| %>
+  <div class="card-notifications">
+    <div class="card-notification-sidebar"></div>
+    <div class="card-notifications-content">
+      <div class="user-card-info">
+        <div class="small-notifications-card-user-avatar">
+          <%#= cl_image_tag User.find(d.user_id).avatar, crop: :thumb %>
+        </div>
           <% if hazard_notification.active? %>
             <p>Your friend is in danger</p>
           <% else %>
             <p>Your friend is safe</p>
           <% end %>
-        <% end %>
-
-
-    </div>
-    <div class="friend-request-notification-buttons">
-      <div class="friend-request-notification-button">
-        <%#= link_to friend_request_path(d), method: :patch do %>
-        <%#= image_tag 'notifications_accept.svg' %>
-        <%# end %>
       </div>
-      <div class="friend-request-notification-button">
-        <%#= link_to friend_request_path(d), method: :delete do %>
-        <%#= image_tag 'notifications_decline.svg' %>
-        <%# end %>
+      <div class="friend-request-notification-buttons">
+        <div class="friend-request-notification-button">
+          <%#= link_to friend_request_path(d), method: :patch do %>
+          <%#= image_tag 'notifications_accept.svg' %>
+          <%# end %>
+        </div>
+        <div class="friend-request-notification-button">
+          <%#= link_to friend_request_path(d), method: :delete do %>
+          <%#= image_tag 'notifications_decline.svg' %>
+          <%# end %>
+        </div>
       </div>
     </div>
   </div>
-</div>
-<%# end %>
+<% end %>
 
 
 
