@@ -1,9 +1,13 @@
+.read-notification-button {
+  background-color: transparent;
+  border: none;
+}
+
 .notifications-container {
   width: 390px;
   margin: 0 auto;
   padding-bottom: 50px;
   margin-top: 58px;
-
 }
 
 .card-notifications {
@@ -13,8 +17,11 @@
   width: 370px;
   align-items: center;
   margin-bottom: 10px;
-  #unread {
-    background-color: #58C8D7;
+  .unread {
+    background-color: #58C8D7 ;
+  }
+  .read {
+    background-color: #E2E1E1 !important;
   }
   #in-danger {
     background-color: #DA2222;
@@ -22,13 +29,12 @@
   #safe {
     background-color: #298751;
   }
-
 }
 
 .card-notification-sidebar {
   width: 10px;
   height: 60px;
-  background-color: #E2E1E1;
+
   border-radius: 50px;
 }
 
