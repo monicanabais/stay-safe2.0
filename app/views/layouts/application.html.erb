@@ -16,7 +16,7 @@
     <meta property="og:site_name" content="<%= meta_title %>" />
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
-    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= stylesheet_include_tag 'application', media: 'all' %>
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
 </head>
 <body>
@@ -27,10 +27,12 @@
 
         <%= render 'shared/navbar' if current_user %>
 
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
+    <%= javascript_pack_tag "map" %>
+    <%= javascript_pack_tag 'application' %>
+    <%= yield :after_js %>
 
-        <%= javascript_include_tag 'application' %>
-        <%= javascript_pack_tag 'application' %>
-        <%= yield :after_js %>
     </div>
 </body>
 </html>

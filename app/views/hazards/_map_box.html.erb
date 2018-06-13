@@ -1,0 +1,5 @@
+  <div class="hazard-card <%= hazard.kind == "Forest fire" ? "hazard-forest" : "hazard-building" %>">
+    <p><%= image_tag 'cards_fire.svg' %> <%= hazard.kind %></p>
+    <p><%= image_tag 'cards_location.svg' %> <%= hazard.location %></p>
+    <p><%= image_tag 'cards_loading.svg' %> <%= hazard.status %></p>
+  </div>
