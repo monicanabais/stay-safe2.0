@@ -1,14 +1,10 @@
-<h1>Current Hazards</h1>
-
-<% @hazards.each do |hazard| %>
-<div class="hazards">
-  <p><%= hazard.kind %></p>
-  <p><%= hazard.location %></p>
-  <p><%#= hazard.latitude %></p>
-  <p><%#= hazard.longitude %></p>
-  <p><%= hazard.status %></p>
+<div class="page-intro">
+  <p>Current Hazards</p>
 </div>
-<% end %>
-
-
-
+<div
+  id="map"
+  style="width: 100vw;
+  height: 642px;
+  margin: 0 auto;"
+  data-markers="<%= @markers.to_json %>"
+></div>

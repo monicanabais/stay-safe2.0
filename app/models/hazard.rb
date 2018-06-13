@@ -1,13 +1,15 @@
 class Hazard < ApplicationRecord
   has_many :hazard_notifications
-
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
+  # validate :kind, acceptance: { accept: ['Forest fire', 'Building fire'] }
+  # vaildate :state, acceptance: { accept: ['Active', 'Contained', 'Extinct'] }
 
   after_create :find_and_notify_nearby_people
 
   def find_and_notify_nearby_people
-    people_nearby = CurrentLocation.near(self.location, 20).map(&:user)
+
+    people_nearby = CurrentLocation.near([self.latitude, self.longitude], 20).map(&:user)
 
     people_nearby.each do |user|
       user.friends.each do |friend|
@@ -18,3 +20,4 @@ class Hazard < ApplicationRecord
     end
   end
 end
+

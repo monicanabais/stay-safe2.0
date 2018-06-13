@@ -4,7 +4,6 @@
   overflow: auto;
 }
 
-
 .profile-avatar img {
   border-radius: 50%;
   width: 135px;
@@ -27,17 +26,22 @@
 .location-turnon {
   width: 315px;
   height: 55px;
-  background-color: #608ACA;
   border-radius: 27.5px;
   margin: 0 auto;
-  margin-top: -260px;
+  background-color: #97A5BE;
+  // margin-top: -260px;
   color: white;
   display: block;
   text-align: center;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
   border: none;
-  &:focus {
+  position: absolute;
+  bottom: 260px;
+  &.current-location-new {
     background-color: #56bf7e;
+  }
+  &.non-current-location-new {
+    background-color: #608ACA;
   }
   a {
       outline: 0;

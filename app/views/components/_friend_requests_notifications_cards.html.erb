@@ -1,33 +1,33 @@
 <% @incoming.each do |d| %>
-<div class="card-notifications">
-  <div class="card-notification-sidebar <%= d.read == true ? "read" : "unread" %>" ></div>
-  <div class="card-notifications-content">
-    <%= simple_form_for(d, :url => friend_request_read_path(d), method: :patch) do |f| %>
-      <%= f.hidden_field :read, :value => true %>
-      <%= button_tag type: :submit, class: "read-notification-button" do %>
-        <div class="user-card-info">
-          <div class="small-notifications-card-user-avatar">
-            <%= cl_image_tag User.find(d.user_id).avatar, crop: :thumb %>
+  <div class="card-notifications">
+    <div class="card-notification-sidebar <%= d.read == true ? "read-sidebar" : "unread-sidebar" %>" ></div>
+    <div class="card-notifications-content <%= d.read == true ? "read" : "unread" %>">
+      <%= simple_form_for(d, :url => friend_request_read_path(d), method: :patch) do |f| %>
+        <%= f.hidden_field :read, :value => true %>
+        <%= button_tag type: :submit, class: "read-notification-button" do %>
+          <div class="user-card-info">
+            <div class="small-notifications-card-user-avatar">
+              <%= cl_image_tag User.find(d.user_id).avatar, crop: :thumb %>
+            </div>
+            <p>
+              <%= User.find(d.user_id).first_name %> <%= User.find(d.user_id).last_name %> wants to add you as a friend
+            </p>
           </div>
-          <p>
-            <%= User.find(d.user_id).first_name %> <%= User.find(d.user_id).last_name %> wants to add you as a friend
-          </p>
+        <% end %>
+      <% end %>
+      <div class="friend-request-notification-buttons">
+        <div class="friend-request-notification-button">
+          <%= link_to friend_request_path(d), method: :patch do %>
+          <%= image_tag 'notifications_accept.svg' %>
+          <% end %>
         </div>
-      <% end %>
-    <% end %>
-   <div class="friend-request-notification-buttons">
-    <div class="friend-request-notification-button">
-      <%= link_to friend_request_path(d), method: :patch do %>
-      <%= image_tag 'notifications_accept.svg' %>
-      <% end %>
-    </div>
-    <div class="friend-request-notification-button">
-      <%= link_to friend_request_path(d), method: :delete do %>
-      <%= image_tag 'notifications_decline.svg' %>
-      <% end %>
+        <div class="friend-request-notification-button">
+          <%= link_to friend_request_path(d), method: :delete do %>
+          <%= image_tag 'notifications_decline.svg' %>
+          <% end %>
+        </div>
+      </div>
     </div>
   </div>
-</div>
-</div>
 <% end %>
 
