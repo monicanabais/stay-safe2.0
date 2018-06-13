@@ -1,7 +1,7 @@
 <% @outgoing.each do |out| %>
   <div class="card-notifications">
-    <div class="card-notification-sidebar <%= out.read_by_friend == true ? "read" : "unread" %>"></div>
-    <div class="card-notifications-content">
+    <div class="card-notification-sidebar <%= out.read_by_friend == true ? "read-sidebar" : "unread-sidebar" %>"></div>
+    <div class="card-notifications-content <%= out.read == true ? "read" : "unread" %>">
       <%= simple_form_for(out, :url => friend_request_read_by_friend_path(out), method: :patch) do |f| %>
       <%= f.hidden_field :read_by_friend, :value => true %>
       <%= button_tag type: :submit, class: "read-notification-button" do %>

@@ -7,8 +7,8 @@ class FriendRequestsController < ApplicationController
   end
 
   def index
-    @incoming = FriendRequest.where(friend: current_user).where(accepted: false)
-    @outgoing = current_user.friend_requests.where(accepted: true)
+    @incoming = FriendRequest.where(friend: current_user).where(accepted: false).order(created_at: :desc)
+    @outgoing = current_user.friend_requests.where(accepted: true).order(created_at: :desc)
   end
 
   def new
@@ -32,6 +32,7 @@ class FriendRequestsController < ApplicationController
 
   def update
     @friend_request.update(accepted: true)
+    @friend_request.update(read: true)
     @friend_request.accept
     redirect_to friend_requests_path
   end

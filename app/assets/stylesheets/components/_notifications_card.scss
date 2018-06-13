@@ -18,10 +18,19 @@
   align-items: center;
   margin-bottom: 10px;
   .unread {
-    background-color: #58C8D7 ;
+    box-shadow: 0 0 15px #58C8D7 ;
+    background-color: #FAFAFA;
   }
   .read {
+    box-shadow: none  !important;
+  }
+  .unread-sidebar {
+    background-color: #58C8D7;
+    box-shadow: 0 0 15px #58C8D7;
+  }
+  .read-sidebar {
     background-color: #E2E1E1 !important;
+
   }
   #in-danger {
     background-color: #DA2222;

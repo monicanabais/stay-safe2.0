@@ -4,7 +4,6 @@
   overflow: auto;
 }
 
-
 .profile-avatar img {
   border-radius: 50%;
   width: 135px;
@@ -30,12 +29,14 @@
   background-color: #608ACA;
   border-radius: 27.5px;
   margin: 0 auto;
-  margin-top: -260px;
+  // margin-top: -260px;
   color: white;
   display: block;
   text-align: center;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
   border: none;
+  position: absolute;
+  bottom: 260px;
   &:focus {
     background-color: #56bf7e;
   }
