@@ -1,0 +1,30 @@
+.hazard-card {
+  width: 370px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: white;
+  margin-bottom: 5px;
+  padding-top: 7px;
+  p {
+    margin-bottom: 0;
+    margin-left: 80px;
+    font-size: 18px;
+    font-weight: lighter;
+    text-align: left;
+    color: white;
+    font-weight: 500;
+  }
+  img {
+    width: 20px;
+  }
+}
+
+.hazard-forest {
+  background: url('http://res.cloudinary.com/mnabais/image/upload/c_scale,w_500/v1528882341/ipqjj9dgt73zpeaduuc5.jpg') left center;
+
+}
+
+.hazard-building {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), url('http://res.cloudinary.com/mnabais/image/upload/c_scale,w_500/v1528882330/vuapjriadkc9wuchyxqw.jpg') left center;
+}

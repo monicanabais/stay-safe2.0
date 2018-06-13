@@ -7,7 +7,9 @@ class Hazard < ApplicationRecord
   after_create :find_and_notify_nearby_people
 
   def find_and_notify_nearby_people
-    people_nearby = CurrentLocation.near(self.location, 20).map(&:user)
+
+    people_nearby = CurrentLocation.near([self.latitude, self.longitude], 20).map(&:user)
+
     people_nearby.each do |user|
       user.friends.each do |friend|
         HazardNotification.create(user: user, hazard: self, notifiee: friend)
