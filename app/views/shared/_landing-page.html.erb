@@ -1,16 +1,63 @@
-<div class="picture-background">
-    <p class="landing-more-info-button">Get to know us</p>
-
-      <h2 class="landing-logo ">Stay Safe</h2>
-      <!-- <p class="landing-logo-two-point-oh">2.0</p> -->
-      <p class="landing-description ">Be aware of dangerous situations around you and your family</p>
+<div class="header-solid transparent">
+    <div class="header-text text-center">
       <%= link_to new_user_session_path do %>
-      <p  class="landing-start-button text-center ">Start here</p>
+     Join today and Stay Safe!
       <% end %>
     </div>
-    <div class="landing-more-info hidden">
-    <p>Stay Safe allows you to add friends and get life updated if there's a hazard near them! </p>
-    <p>The wondering days are over! Join us TODAY!</p>
+  </div>
 
+<div class="picture-background">
+  <!-- <p class="landing-more-info-button">Get to know us</p> -->
+
+  <h2 class="landing-logo">Stay Safe</h2>
+  <!-- <p class="landing-logo-two-point-oh">2.0</p> -->
+  <p class="landing-description">Be aware of dangerous situations around you and your family</p>
+  <%= link_to new_user_session_path do %>
+  <p  class="landing-start-button text-center ">Start here</p>
+  <% end %>
+</div>
+
+<!-- <div class="landing-more-info hidden">
+  <p>Stay Safe allows you to add friends and get live updates if there is a hazard near them. </p>
+  <p>The wondering days are over! Join us TODAY!</p>
+</div> -->
+
+</div>
+
+<div class="landing-desc wrapper">
+  <div class="landing-desc-more text-center">
+    <p class="landing-text color-text-desc">Add friends and family members <br> <br>Get live updates in case of hazard</p>
+  </div>
+
+</div>
+
+<div class="landing-testimonials wrapper">
+  <div class="quote text-center">
+    <h6>Monica</h6>
+    <%= image_tag '5stars.png', alt: "5-star rating", width: 95, height: 15%>
+    <br>
+    <br>
+    <p>With the beginning of the wild fires season, Stay Safe makes me and my family feel really <em>safe</em>!</p>
+  </div>
+
+  <div class="quote text-center">
+    <h6>Pavel</h6>
+    <%= image_tag '5stars.png', alt: "5-star rating", width: 95, height: 15%>
+    <br>
+    <br>
+    <p>Finally an app that allows me to know that all my friends and family are safe, wherever they are in the world.</p>
+  </div>
+
+  <div class="quote text-center">
+    <h6>Maria</h6>
+    <%= image_tag '5stars.png', alt: "5-star rating", width: 95, height: 15 %>
+    <br>
+    <br>
+    <p>Being a digital nomad, it's great to have a way to let my family and close friends know that I am safe, without having to share GPS coordinates with any third-parties. </p>
   </div>
 </div>
+
+  <div class="landing-map wrapper text-center">
+      <p class="landing-text color-text-map">Check hazards on the map and Stay Safe wherever you go</p>
+  </div>
+
