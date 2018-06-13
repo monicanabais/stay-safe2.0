@@ -30,12 +30,17 @@
   }
   .read-sidebar {
     background-color: #E2E1E1 !important;
-
   }
-  #in-danger {
+  .in-danger {
     background-color: #DA2222;
   }
-  #safe {
+  .safe {
+    background-color: #298751;
+  }
+  .in-danger-sidebar {
+    background-color: #DA2222;
+  }
+  .safe-sidebar {
     background-color: #298751;
   }
 }

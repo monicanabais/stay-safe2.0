@@ -1,0 +1,11 @@
+<% @my_hazard_notifications.each do |hazard_notification| %>
+  <div class="card-notifications">
+    <div class="card-notification-sidebar"></div>
+    <div class="card-notifications-content">
+      <div class="user-card-info">
+          <p>You are in a danger zone! </p>
+          <%= link_to "Mark yourself safe", mark_as_safe_path, method: :post, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+<% end %>

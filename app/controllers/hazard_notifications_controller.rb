@@ -3,6 +3,7 @@ class HazardNotificationsController < ApplicationController
 
   def index
     @friend_hazard_notifications = HazardNotification.where(user: current_user.friends, notifiee: current_user)
+    # byebug
   end
 
   def mark_as_safe

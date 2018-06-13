@@ -1,0 +1,15 @@
+<% @friend_hazard_notifications.each do |hazard_notification| %>
+  <div class="card-notifications">
+    <div class="card-notification-sidebar"></div>
+    <div class="card-notifications-content">
+      <div class="user-card-info">
+        <div class="small-notifications-card-user-avatar">
+          <%= cl_image_tag User.find(hazard_notification.user_id).avatar, crop: :thumb %>
+        </div>
+          <p>
+             Your Friend <%= User.find(hazard_notification.user_id).first_name %> <%= User.find(hazard_notification.user_id).last_name %> is in a dangerous zone
+          </p>
+      </div>
+    </div>
+  </div>
+<% end %>

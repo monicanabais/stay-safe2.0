@@ -1,6 +1,12 @@
 
  <div class="notifications-container">
-
-  <%= render "components/hazard_notifications" %>
+  <%= render "components/hazard_notifications_self_danger" %>
+  <% @friend_hazard_notifications.each do |hazard_notification| %>
+    <% if hazard_notification.active? %>
+      <%= render "components/hazard_notifications_friend_danger" %>
+    <% else %>
+      <%= render "components/hazard_notifications_friend_danger" %>
+      <%= render "components/hazard_notifications_friend_safe" %>
+    <% end %>
+  <% end %>
 </div>
-
