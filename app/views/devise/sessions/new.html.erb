@@ -4,7 +4,7 @@
 
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <%= f.input :email, label: '&nbsp;'.html_safe, placeholder: "name@email.com", required: true, autofocus: true, label_html: { class: 'icons envelope-icon' } %>
-    <%= f.input :password, required: true, placeholder: "password (#{@minimum_password_length} 6 chars minimum )", label_html: { class: 'icons lock-icon sign-in-password' } %>
+    <%= f.input :password, label: '&nbsp;'.html_safe, required: true, placeholder: "password (#{@minimum_password_length} 6 chars minimum )", label_html: { class: 'icons lock-icon sign-in-password' } %>
     <% if devise_mapping.rememberable? -%>
       <% end -%>
       <%= f.button :submit, "Sign in", class: "form-button" %>
