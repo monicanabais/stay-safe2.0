@@ -11,6 +11,9 @@ function sendCurrentLocation (data) {
   .then(response => response.json())
   .then((data) => {
     console.log(data); // Look at local_names.default
+    const button = document.getElementById('location');
+    button.classList.remove('non-current-location-new');
+    button.classList.add('current-location-new');
   });
 };
 

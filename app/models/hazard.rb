@@ -1,10 +1,9 @@
 class Hazard < ApplicationRecord
   has_many :hazard_notifications
-
   geocoded_by :location
   after_validation :geocode, if: :will_save_change_to_location?
-  validates :kind, acceptance: { accept: ['Forest fire', 'Building fire'] }
-  vaildates :state, acceptance: { accept: ['Active', 'Contained', 'Extinct'] }
+  # validate :kind, acceptance: { accept: ['Forest fire', 'Building fire'] }
+  # vaildate :state, acceptance: { accept: ['Active', 'Contained', 'Extinct'] }
 
   after_create :find_and_notify_nearby_people
 
