@@ -21,4 +21,3 @@ function fade_out() {
 
 import { landingInfo } from '../components/landing';
 landingInfo();
-
