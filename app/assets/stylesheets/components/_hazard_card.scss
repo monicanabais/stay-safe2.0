@@ -1,0 +1,30 @@
+.hazard-card {
+  width: 370px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: white;
+  margin-bottom: 5px;
+  padding-top: 7px;
+  p {
+    margin-bottom: 0;
+    margin-left: 80px;
+    font-size: 18px;
+    font-weight: lighter;
+    text-align: left;
+    color: white;
+    font-weight: 500;
+  }
+  img {
+    width: 20px;
+  }
+}
+
+.hazard-forest {
+  background: image-url('forest1') left center;
+
+}
+
+.hazard-building {
+  background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.4)), image-url('city1') left center;
+}
