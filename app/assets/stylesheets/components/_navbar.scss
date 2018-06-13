@@ -21,5 +21,9 @@
   object-fit: contain !important;
   &.active path {
     fill: #4D6CA0;
+  &.notifications-ping {
+    fill: #CA372E !important;
+  }
+
   }
 }
