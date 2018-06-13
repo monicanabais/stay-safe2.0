@@ -1,26 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Stay Safe</title>
+    <title><%= meta_title %></title>
+    <meta name="description" content="<%= meta_description %>">
+    <%= favicon_link_tag asset_path('favicon - stay-safe.ico'), :rel => 'icon', :type =>  'image/png' %>
+
+    <!-- Facebook Open Graph data -->
+    <meta property="og:title" content="<%= meta_title %>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="<%= request.original_url %>" />
+    <meta property="og:image" content="<%= meta_image %>" />
+    <meta property="og:description" content="<%= meta_description %>" />
+    <meta property="og:site_name" content="<%= meta_title %>" />
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
-    <%= stylesheet_link_tag 'application', media: 'all' %>
-  </head>
-  <body>
+    <%= stylesheet_include_tag 'application', media: 'all' %>
+    <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
+</head>
+<body>
     <div class="container">
-    <%= render 'shared/flashes' %>
-    <%= render 'shared/notifications_tab' if action_name == "index" && controller_name == "friend_requests" || action_name == "index" && controller_name == "hazard_notifications" %>
-    <%= yield %>
+        <%= render 'shared/flashes' %>
+        <%= render 'shared/notifications_tab' if action_name == "index" && controller_name == "friend_requests" || action_name == "index" && controller_name == "hazard_notifications" %>
+        <%= yield %>
 
-    <%= render 'shared/navbar' if current_user %>
+        <%= render 'shared/navbar' if current_user %>
 
     <%= javascript_include_tag 'application' %>
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
     <%= javascript_pack_tag "map" %>
     <%= javascript_pack_tag 'application' %>
     <%= yield :after_js %>
+
     </div>
-  </body>
+</body>
 </html>
