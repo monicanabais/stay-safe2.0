@@ -31,17 +31,19 @@
   .read-sidebar {
     background-color: #E2E1E1 !important;
   }
-  .in-danger {
+  .in-danger-unread {
     background-color: #DA2222;
   }
-  .safe {
+  .safe-unread {
     background-color: #298751;
   }
-  .in-danger-sidebar {
+  .in-danger-sidebar-unread {
     background-color: #DA2222;
+    box-shadow: 0 0 15px #DA2222;
   }
-  .safe-sidebar {
+  .safe-sidebar-unread {
     background-color: #298751;
+    box-shadow: 0 0 15px #298751;
   }
 }
 
@@ -60,6 +62,7 @@
   align-items: center;
   border-radius: 5px;
   background-color: white;
+
   p {
     margin-bottom: 0;
     margin-left: 15px;
@@ -92,3 +95,45 @@
   }
 }
 
+.open-model-to-check-yourself-safe {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.modal-friends-card-hazard-warnings {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  opacity: 0.9;
+  img {
+    width: 20px;
+    margin: 8px;
+
+  }
+  p {
+    margin: 0;
+    color: black;
+    // rgba(255, 255, 255, 0.9);
+    font-weight: lighter;
+    font-size: 12px;
+  }
+}
+  .modal-friends-card-hazard-warnings-container {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+.modal-friends-card-hazard-warnings-container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+.close-modal {
+  display: inline-block !important;
+}
+
+.mark-yourself-safe {
+  width: 223px;
+  height: 39px;
+
+}

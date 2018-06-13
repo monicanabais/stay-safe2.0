@@ -19,6 +19,6 @@ function fade_out() {
   $(".alert-dismissible").fadeOut().empty();
 }
 
-import { landingInfo } from '../components/landing'
+import { landingInfo } from '../components/landing';
 landingInfo();
 

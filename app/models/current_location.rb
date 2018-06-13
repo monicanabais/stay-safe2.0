@@ -20,4 +20,6 @@ class CurrentLocation < ApplicationRecord
       end
     end
   end
+
+
 end
