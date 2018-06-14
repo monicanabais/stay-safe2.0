@@ -4,7 +4,7 @@
 }
 
 .notifications-container {
-  width: 390px;
+  width: 95vw !important;
   margin: 0 auto;
   padding-bottom: 50px;
   margin-top: 58px;
@@ -14,7 +14,7 @@
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  width: 370px;
+  width: 95%;
   align-items: center;
   margin-bottom: 10px;
   .unread {
@@ -54,7 +54,7 @@
 }
 
 .card-notifications-content {
-  width: 345px;
+  width: 93%;
   height: 80px;
   display: flex;
   justify-content: space-between;

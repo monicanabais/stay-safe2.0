@@ -28,9 +28,7 @@
             <div class="friends-card-hazard-warnings-container safe-friend">
                <p><%= friend.first_name %> is Safe</p>
             </div>
-
           </div>
-
         <% else %>
         <div class="friends-card-corner-button unsafe"></div>
           <div class="friends-card-hazard-warnings hidden">
@@ -43,9 +41,7 @@
              <div class="friends-card-hazard-warnings-container">
               <p><%= image_tag 'cards_loading.svg' %> <%= friend.get_current_hazard.status if friend.get_current_hazard %></p>
             </div>
-
           </div>
-
         <% end %>
       </div>
 

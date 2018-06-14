@@ -1,12 +1,13 @@
 .notifications-tab-container {
   position: fixed !important;
   top: 0;
-  width: 100vw;
+  min-width: 100vw;
   background-color: #E7E7E7;
   display: flex;
   height: 47px;
   align-items: center;
   box-shadow: -0.5px 0 1px rgba(0,0,0,0.5);
+  margin: 0 auto;
 }
 
 .notifications-tab {
