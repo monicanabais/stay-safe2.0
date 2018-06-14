@@ -23,7 +23,7 @@
   margin-top: 70px;
 }
 
-#user_password_confirmation, #user_current_password, #user_first_name, #user_last_name, .edit-form #user_email, .edit-form #user_password {
+#user_current_password, .edit-form #user_email #user_password #user_first_name #user_last_name #user_password_confirmation {
   background-color: transparent;
   border: none;
   box-shadow: none;
@@ -31,7 +31,7 @@
   font-weight: lighter;
 }
 
-#user_email, #user_password {
+#user_email, #user_password, #user_first_name, #user_last_name, #user_password_confirmation {
   background-color: transparent;
   border: none;
   box-shadow: none;
@@ -39,7 +39,7 @@
   font-weight: lighter;
 }
 
-#user_email::placeholder, #user_password::placeholder {
+#user_email::placeholder, #user_password::placeholder, #user_first_name::placeholder, #user_last_name::placeholder, #user_password_confirmation::placeholder {
   color: rgba(255, 255, 255, 0.4) !important;
 }
 
@@ -47,14 +47,14 @@
   color: rgba(50,50,50,0.6) !important;
 }
 
-.user_email, .user_password {
+.user_email, .user_password, .user_first_name, .user_last_name, .user_password_confirmation {
   border-bottom: 1px solid rgba(255,255,255,0.6);
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
 
-.user_password_confirmation, .user_current_password, .user_first_name, .user_last_name, .edit-form .user_email, .edit-form .user_password {
+.user_current_password, .edit-form .user_email .user_password .user_first_name .user_last_name .user_password_confirmation {
   border-bottom: 1px solid rgba(0,0,0,0.8);
   display: flex;
   align-items: center;
@@ -129,7 +129,12 @@
   }
 }
 
-
-
-
-
+.add-avatar-button {
+  color: rgba(255, 255, 255, 0.6);
+  border: 1px solid white;
+  border-radius: 27.5px;
+  font-weight: 300;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
