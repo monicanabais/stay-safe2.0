@@ -1,5 +1,6 @@
 
 <% @friends.each do |friend| %>
+<% if friend.safe? == false %>
 
 <div class="col-xs-6 col-md-6 ">
 
@@ -20,29 +21,20 @@
           <%= image_tag 'cards_front_arrow.svg' %>
         </div>
       </div>
-
       <div class="friends-card-button-content">
-        <% if friend.safe? %>
-          <div class="friends-card-corner-button safe"></div>
-          <div class="friends-card-hazard-warnings hidden">
-            <div class="friends-card-hazard-warnings-container safe-friend">
-               <p><%= friend.first_name %> is Safe</p>
+
+          <div class="friends-card-corner-button unsafe"></div>
+            <div class="friends-card-hazard-warnings hidden">
+              <div class="friends-card-hazard-warnings-container">
+                <p><%= image_tag 'cards_fire.svg' %> <%= friend.get_current_hazard.kind if friend.get_current_hazard %></p>
+              </div>
+               <div class="friends-card-hazard-warnings-container">
+                <p><%= image_tag 'cards_location.svg' %> <%= friend.get_current_hazard.location if friend.get_current_hazard %></p>
+              </div>
+               <div class="friends-card-hazard-warnings-container">
+                <p><%= image_tag 'cards_loading.svg' %> <%= friend.get_current_hazard.status if friend.get_current_hazard %></p>
+              </div>
             </div>
-          </div>
-        <% else %>
-        <div class="friends-card-corner-button unsafe"></div>
-          <div class="friends-card-hazard-warnings hidden">
-            <div class="friends-card-hazard-warnings-container">
-              <p><%= image_tag 'cards_fire.svg' %> <%= friend.get_current_hazard.kind if friend.get_current_hazard %></p>
-            </div>
-             <div class="friends-card-hazard-warnings-container">
-              <p><%= image_tag 'cards_location.svg' %> <%= friend.get_current_hazard.location if friend.get_current_hazard %></p>
-            </div>
-             <div class="friends-card-hazard-warnings-container">
-              <p><%= image_tag 'cards_loading.svg' %> <%= friend.get_current_hazard.status if friend.get_current_hazard %></p>
-            </div>
-          </div>
-        <% end %>
       </div>
 
     </div>
@@ -60,6 +52,50 @@
     </div>
   </div>
 
+<% else %>
+  <div class="friends-card front-shadow">
+
+      <div class="friends-card-front">
+
+        <div class="friends-card-front-main-info">
+
+          <div class="friends-card-user-avatar">
+            <%= cl_image_tag friend.avatar, crop: :thumb %>
+          </div>
+
+          <div class="friends-card-user-name">
+            <p class="friends-card-user-name-text text-center"><%= friend.first_name %> <%= friend.last_name %></p>
+          </div>
+          <div class="friends-card-front-arrow">
+            <%= image_tag 'cards_front_arrow.svg' %>
+          </div>
+        </div>
+        <div class="friends-card-button-content">
+
+            <div class="friends-card-corner-button safe"></div>
+  <div class="friends-card-hazard-warnings hidden">
+    <div class="friends-card-hazard-warnings-container safe-friend">
+       <p><%= friend.first_name %> is Safe</p>
+    </div>
+  </div>
+        </div>
+
+      </div>
+
+      <div class="friends-card-back hide">
+        <div class="friends-card-back-arrow">
+          <%= image_tag 'cards_back_arrow.svg' %>
+        </div>
+
+        <div class="friends-card-actions">
+          <%= link_to friendship_path(current_user.friendship_with(friend)), method: :delete do %>
+          <p>Unfriend</p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+
 </div>
+<% end %>
 <% end %>
 

@@ -2,7 +2,7 @@ class FriendshipsController < ApplicationController
   before_action :set_friendship, only: [:destroy]
 
   def index
-    @friendships = Friendship.all.order(created_at: :desc)
+    @friendships = Friendship.all
     @friends = current_user.friends
   end
 
