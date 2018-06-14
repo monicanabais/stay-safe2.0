@@ -10,16 +10,16 @@
   </label>
   <div class="edit-form">
     <div class="form-user-name">
-      <%= f.input :first_name, required: true, label: '&nbsp;'.html_safe, placeholder: 'First name', label_html: { class: 'icons user-icon' } %>
-      <%= f.input :last_name, required: true, label: '&nbsp;'.html_safe, placeholder: 'Last name', label_html: { class: 'icons user-icon' } %>
+      <%= f.input :first_name, required: true, label: '&nbsp;'.html_safe, placeholder: 'First name', label_html: { class: 'icons update-user-icon' } %>
+      <%= f.input :last_name, required: true, label: '&nbsp;'.html_safe, placeholder: 'Last name', label_html: { class: 'icons update-user-icon' } %>
     </div>
-    <%= f.input :email, label: '&nbsp;'.html_safe, required: true, autofocus: true, label_html: { class: 'icons envelope-icon' } %>
+    <%= f.input :email, label: '&nbsp;'.html_safe, required: true, autofocus: true, label_html: { class: 'icons update-envelope-icon' } %>
     <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
     <% end %>
-    <%= f.input :current_password, label: '&nbsp;'.html_safe, required: true, label_html: { class: 'icons lock-icon' }, placeholder: "current password" %>
-    <%= f.input :password, label: '&nbsp;'.html_safe, autocomplete: "off", placeholder: "new password (optional)", required: false, label_html: { class: 'icons lock-icon' } %>
-    <%= f.input :password_confirmation, label: '&nbsp;'.html_safe, placeholder: "confirm new password", required: false, label_html: { class: 'icons lock-icon' } %>
+    <%= f.input :current_password, label: '&nbsp;'.html_safe, required: true, label_html: { class: 'icons update-lock-icon' }, placeholder: "current password" %>
+    <%= f.input :password, label: '&nbsp;'.html_safe, autocomplete: "off", placeholder: "new password (optional)", required: false, label_html: { class: 'icons update-lock-icon' } %>
+    <%= f.input :password_confirmation, label: '&nbsp;'.html_safe, placeholder: "confirm new password", required: false, label_html: { class: 'icons update-lock-icon' } %>
     <div class="form-actions">
       <%= f.button :submit, "Update", class: "form-button" %>
     </div>

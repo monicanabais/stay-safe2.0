@@ -23,7 +23,7 @@
   margin-top: 70px;
 }
 
-#user_current_password, .edit-form #user_email, .edit-form #user_password, .edit-form #user_first_name, .edit-form #user_last_name, .edit-form #user_password_confirmation {
+#user_current_password, .edit-form #user_email, .edit-form #user_password, .edit-form #user_first_name, .edit-form #user_last_name, .edit-form #user_password_confirmation, .user_search #user_first_name {
   background-color: transparent;
   border: none;
   box-shadow: none;
@@ -43,7 +43,7 @@
   color: rgba(255, 255, 255, 0.4) !important;
 }
 
-.edit-form #user_password::placeholder, .edit-form #user_password_confirmation::placeholder {
+.edit-form #user_password::placeholder, .edit-form #user_password_confirmation::placeholder, .user_search #user_first_name::placeholder {
   color: rgba(50,50,50,0.6) !important;
 }
 
@@ -54,7 +54,7 @@
   margin-bottom: 20px;
 }
 
-.user_current_password, .edit-form .user_email, .edit-form .user_password, .edit-form .user_first_name, .edit-form .user_last_name, .edit-form .user_password_confirmation {
+.user_current_password, .edit-form .user_email, .edit-form .user_password, .edit-form .user_first_name, .edit-form .user_last_name, .edit-form .user_password_confirmation, .user_search {
   border-bottom: 1px solid rgba(0,0,0,0.8);
   display: flex;
   align-items: center;
@@ -63,15 +63,27 @@
 .user-icon {
   background-image: image-url('form_user.svg');
 }
+.update-user-icon {
+  background-image: image-url('form_user_update.svg');
+}
 .lock-icon {
   background-image: image-url('form_password.svg');
+}
+.update-lock-icon {
+  background-image: image-url('form_password_update.svg');
 }
 .envelope-icon {
   background-image: image-url('form_email.svg');
 }
+.update-envelope-icon {
+  background-image: image-url('form_email_update.svg');
+}
+.search-icon {
+  background-image: image-url('form_search.svg');
+}
 
 .icons {
-  width: 30px;
+  width: 28px;
   height: 19px;
   background-size: cover;
   font-size: 1px;
