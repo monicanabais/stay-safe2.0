@@ -23,7 +23,7 @@
   margin-top: 70px;
 }
 
-#user_current_password, .edit-form #user_email, .edit-form #user_password, .edit-form #user_first_name, .edit-form #user_last_name, .edit-form #user_password_confirmation {
+#user_current_password, .edit-form #user_email, .edit-form #user_password, .edit-form #user_first_name, .edit-form #user_last_name, .edit-form #user_password_confirmation, .user_search #user_first_name {
   background-color: transparent;
   border: none;
   box-shadow: none;
@@ -77,6 +77,9 @@
 }
 .update-envelope-icon {
   background-image: image-url('form_email_update.svg');
+}
+.search-icon {
+  background-image: image-url('form_search.svg');
 }
 
 .icons {
