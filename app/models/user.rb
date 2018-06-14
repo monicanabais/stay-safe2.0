@@ -25,23 +25,16 @@ class User < ApplicationRecord
     user: [:first_name, :last_name, :email]}
 
 
-    def remove_friend(friend)
-      self.friends.destroy(friend)
-    end
+  def remove_friend(friend)
+    self.friends.destroy(friend)
+  end
 
-    # def friends_notified
-    #   self.friendships._select! do |friend|
-    #     HazardNotification.where(user: friend).map(&:user).include? self.friendships
-    #   end
-    # end
+  def friendship_with(friend)
+    Friendship.where(user:self, friend:friend).first
+  end
 
-    def friendship_with(friend)
-      Friendship.where(user:self, friend:friend).first
-    end
-
-    def get_current_hazard
-      notification = hazard_notifications.where(status: 0).first
-      notification.hazard if notification
-    end
+  def get_current_hazard
+    notification = hazard_notifications.where(status: 0).first
+    notification.hazard if notification
   end
 end

@@ -23,7 +23,7 @@
   margin-top: 70px;
 }
 
-#user_current_password, .edit-form #user_email #user_password #user_first_name #user_last_name #user_password_confirmation {
+#user_current_password, .edit-form #user_email, .edit-form #user_password, .edit-form #user_first_name, .edit-form #user_last_name, .edit-form #user_password_confirmation {
   background-color: transparent;
   border: none;
   box-shadow: none;
@@ -43,7 +43,7 @@
   color: rgba(255, 255, 255, 0.4) !important;
 }
 
-.edit-form #user_password::placeholder {
+.edit-form #user_password::placeholder, .edit-form #user_password_confirmation::placeholder {
   color: rgba(50,50,50,0.6) !important;
 }
 
@@ -54,18 +54,14 @@
   margin-bottom: 20px;
 }
 
-.user_current_password, .edit-form .user_email .user_password .user_first_name .user_last_name .user_password_confirmation {
+.user_current_password, .edit-form .user_email, .edit-form .user_password, .edit-form .user_first_name, .edit-form .user_last_name, .edit-form .user_password_confirmation {
   border-bottom: 1px solid rgba(0,0,0,0.8);
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
-
-.pen-icon {
-  background-image: image-url('icons/edit.svg');
-}
 .user-icon {
-  background-image: image-url('icons/user.svg');
+  background-image: image-url('form_user.svg');
 }
 .lock-icon {
   background-image: image-url('form_password.svg');
@@ -129,7 +125,7 @@
   }
 }
 
-.add-avatar-button {
+.add-avatar-button, .add-avatar-button-black {
   color: rgba(255, 255, 255, 0.6);
   border: 1px solid white;
   border-radius: 27.5px;
@@ -137,4 +133,8 @@
   padding: 10px 15px;
   margin-bottom: 15px;
   margin-top: 20px;
+}
+.add-avatar-button-black {
+  color: rgba(50,50,50,0.6);
+  border: 1px solid black;
 }
