@@ -63,15 +63,24 @@
 .user-icon {
   background-image: image-url('form_user.svg');
 }
+.update-user-icon {
+  background-image: image-url('form_user_update.svg');
+}
 .lock-icon {
   background-image: image-url('form_password.svg');
+}
+.update-lock-icon {
+  background-image: image-url('form_password_update.svg');
 }
 .envelope-icon {
   background-image: image-url('form_email.svg');
 }
+.update-envelope-icon {
+  background-image: image-url('form_email_update.svg');
+}
 
 .icons {
-  width: 30px;
+  width: 28px;
   height: 19px;
   background-size: cover;
   font-size: 1px;
