@@ -45,6 +45,7 @@
   </div>
 
   <% read_notifications = [] %>
+
   <% FriendRequest.where(friend: current_user).each do |request| %>
     <% if request['read'] %>
       <% read_notifications << 'read' %>
@@ -58,6 +59,14 @@
       <% read_notifications << 'friend_read' %>
     <% else %>
       <% read_notifications << 'friend_unread'  %>
+    <% end %>
+  <% end %>
+
+  <% HazardNotification.where(notifiee: current_user).each do |notification| %>
+    <% if notification['read'] %>
+      <% read_notifications << 'read' %>
+    <% else %>
+      <% read_notifications << 'unread' %>
     <% end %>
   <% end %>
 

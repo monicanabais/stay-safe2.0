@@ -13,12 +13,13 @@
   </div>
 
   <% content_for :after_js do %>
-  <button id='location' class="location-turnon">Turn safety check ON</button>
+  <button id='location' class="location-turnon non-current-location-new ">Turn safety check ON</button>
   <script>
 
-    const button = document.getElementById('location')
+    const button = document.getElementById('location');
     button.addEventListener("click", function () {
-     document.app.setCurrentLocation()
+    document.app.setCurrentLocation();
+    button.classList.add('non-current-location-new');
    })
 
  </script>
@@ -42,4 +43,3 @@
 
 
 </div>
-

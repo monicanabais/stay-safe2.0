@@ -105,3 +105,105 @@
   border: none;
   display: inline-block;
 }
+
+.wrapper {
+  height: 80vh;
+  width: 100vw;
+  padding: 10px;
+}
+
+.landing-desc {
+  background: url('http://res.cloudinary.com/mnabais/image/upload/c_scale,w_500/v1528882341/ipqjj9dgt73zpeaduuc5.jpg');
+  background-size: cover;
+  position: relative;
+}
+
+.live-hazards {
+  position: absolute;
+  bottom: -10px;
+  left: 50px;
+}
+
+.landing-desc-more {
+  padding: 10px;
+}
+
+.landing-text {
+  font-family: $body-font;
+  font-size: 24px;
+  font-weight: lighter;
+  line-height: 1.13;
+  margin: 0;
+  padding: 0 20px;
+  margin-top: 100px;
+}
+
+.color-text-desc {
+  color: #ffffff;
+}
+
+.color-text-map {
+  color: grey;
+}
+
+.quote {
+  padding: 10px;
+  p {
+    font-size: 16px;
+  }
+}
+
+.landing-map {
+  background: image-url('cityscape.jpg');
+  margin-bottom: 0;
+}
+
+.header-solid {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 350px;
+  height: 40px;
+  padding: 15px;
+  background-color: #2267C3;
+  color: #EBF2F0;
+  // color: #f2f7f5;
+  border-radius: 50px;
+  margin-left: -20px;
+  z-index: 9999;
+  opacity: 1;
+  transition: opacity 0.5s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.header-solid.transparent {
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.header-text a {
+  padding: 5px;
+  color: #EBF2F0;
+  text-decoration: none;
+  color: inherit;
+}
+
+// .header-solid {
+//   position: fixed;
+//   top: 20;
+//   left: 0;
+//   width: 50vw;
+//   height: 40px;
+//   padding: 15px;
+//   background-color: black;
+//   color: #EBF2F0;
+//   border-radius: 5px;
+// }
+
+
+
+
+
+

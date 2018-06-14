@@ -18,7 +18,9 @@ Rails.application.routes.draw do
     patch :read
     patch :read_by_friend
   end
-  resources :hazard_notifications, only: [:index, :create]
+  resources :hazard_notifications, only: [:index, :create] do
+    patch :read
+  end
   resources :friendships, only: [:index, :update, :destroy]
   resources :current_locations, only: [:create]
   resources :hazards, only: :index

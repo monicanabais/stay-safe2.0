@@ -26,9 +26,9 @@
 .location-turnon {
   width: 315px;
   height: 55px;
-  background-color: #608ACA;
   border-radius: 27.5px;
   margin: 0 auto;
+  background-color: #97A5BE;
   // margin-top: -260px;
   color: white;
   display: block;
@@ -37,8 +37,11 @@
   border: none;
   position: absolute;
   bottom: 260px;
-  &:focus {
+  &.current-location-new {
     background-color: #56bf7e;
+  }
+  &.non-current-location-new {
+    background-color: #608ACA;
   }
   a {
       outline: 0;
