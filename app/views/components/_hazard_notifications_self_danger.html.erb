@@ -1,41 +1,16 @@
 <% @my_hazard_notifications.each do |hazard_notification| %>
   <div class="card-notifications">
     <div class="card-notification-sidebar <%= hazard_notification.read == true ? "read-sidebar" : "in-danger-sidebar-unread" %>"></div>
-    <div class="card-notifications-content" data-toggle="modal" data-target="#myModal">
+    <div class="card-notifications-content">
       <div class="user-card-info">
-          <p>You are in a danger zone! Click to let your friends know you're save</p>
+          <p>You are in a danger zone! Let your friends know you're save</p>
+      </div>
+
+      <div class="btn user-card-button modal-button">
+        <%= link_to mark_as_safe_path, method: :post do %>
+          <p class="text-center">Add</p>
+        <% end %>
       </div>
     </div>
   </div>
-
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content" >
-
-      <div class="modal-body">
-        <div class="close-modal">
-
-        <button type="button" class="close close-modal-button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        </div>
-
-        <div class="modal-friends-card-hazard-warnings">
-
-            <div class="modal-friends-card-hazard-warnings-container">
-                <p><%= image_tag 'modal_fire.svg' %> <%= hazard_notification.hazard.kind %></p>
-            </div>
-            <div class="modal-friends-card-hazard-warnings-container">
-                <p><%= image_tag 'modal_location.svg' %> <%= hazard_notification.hazard.location %></p>
-            </div>
-            <div class="modal-friends-card-hazard-warnings-container">
-              <p><%= image_tag 'modal_loading.svg' %> <%= hazard_notification.hazard.status %></p>
-            </div>
-
-        </div>
-        <%= link_to "SAFE", mark_as_safe_path, method: :post, class: "btn user-card-button modal-button" %>
-
-      </div>
-
-    </div>
-  </div>
-</div>
 <% end %>

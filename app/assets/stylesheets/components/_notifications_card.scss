@@ -135,6 +135,14 @@
   padding-top: 9px !important;
   height: 40px !important;
   width: 110px !important;
+  margin: 0 10px;
+  a {
+    color: white;
+    text-align: center;
+    p {
+      margin: 0;
+    }
+  }
   &:focus {
     background-color: #56bf7e !important;
   }
