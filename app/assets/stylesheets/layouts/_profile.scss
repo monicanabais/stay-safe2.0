@@ -28,7 +28,7 @@
   height: 55px;
   border-radius: 27.5px;
   margin: 0 auto;
-  background-color: #97A5BE;
+  // background-color: #97A5BE;
   // margin-top: -260px;
   color: white;
   display: block;
@@ -36,7 +36,7 @@
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
   border: none;
   position: absolute;
-  bottom: 260px;
+  bottom: 35vh;
   &.current-location-new {
     background-color: #56bf7e;
   }
@@ -74,7 +74,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 175px;
+  margin-top: 200px;
   p {
     text-shadow: 0.3px 0.3px 1px rgba(0, 0, 0, 0.25);
     color: black;

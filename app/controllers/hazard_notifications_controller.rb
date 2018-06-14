@@ -3,8 +3,8 @@ class HazardNotificationsController < ApplicationController
   before_action :set_hazard_notification, only: :read
 
   def index
-    @friend_hazard_notifications = HazardNotification.where(user: current_user.friends, notifiee: current_user).order(updated_at: :desc)
-
+     @friend_hazard_notifications = HazardNotification.where(user: current_user.friends, notifiee: current_user).order(created_at: :desc)
+    # @friend_hazard_notifications = current_user.hazard_notifications.order(created_at: :desc)
   end
 
   def mark_as_safe
@@ -15,7 +15,7 @@ class HazardNotificationsController < ApplicationController
 
     end
     friends_notifications
-    redirect_to hazard_notifications_path
+    redirect_to hazard_notifications_path, notice: "You are now safe! Your friends were notified "
   end
     #   notification = HazardNotification.where(notifiee: friend)
     #   notification.update(status: :inactive)

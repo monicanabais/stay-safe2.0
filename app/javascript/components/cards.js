@@ -5,7 +5,9 @@ function rotateCards() {
   cards.forEach((card) => {
 
 
-    const frontArrow = card.querySelector('.friends-card-front-arrow');
+    // const frontArrow = card.querySelector('.friends-card-front-arrow');
+    const frontArrow = card.querySelector('.friends-card-front-main-info');
+
     const backArrow = card.querySelector('.friends-card-back-arrow');
 
 

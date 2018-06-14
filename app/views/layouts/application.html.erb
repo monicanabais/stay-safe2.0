@@ -23,8 +23,8 @@
 </head>
 <body>
     <div class="container">
-        <%= render 'shared/flashes' %>
         <%= render 'shared/notifications_tab' if action_name == "index" && controller_name == "friend_requests" || action_name == "index" && controller_name == "hazard_notifications" %>
+        <%= render 'shared/flashes' %>
         <%= yield %>
 
         <%= render 'shared/navbar' if current_user %>

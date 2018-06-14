@@ -2,22 +2,15 @@
   <div class="card-notifications">
     <div class="card-notification-sidebar <%= hazard_notification.read == true ? "read-sidebar" : "in-danger-sidebar-unread" %>"></div>
     <div class="card-notifications-content" data-toggle="modal" data-target="#myModal">
-      <%#= simple_form_for(hazard_notification, url: hazard_notification_read_path(hazard_notification), method: :patch) do |f| %>
-      <%#= f.hidden_field :read, :value => true %>
-      <%#= button_tag type: :submit, class: "read-notification-button" do %>
       <div class="user-card-info">
           <p>You are in a danger zone! Click to let your friends know you're save</p>
-          <%#= link_to "Mark yourself safe", mark_as_safe_path, method: :post, class: "btn btn-primary" %>
       </div>
-      <%# end %>
-      <%# end %>
     </div>
   </div>
 
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content" >
-
 
       <div class="modal-body">
         <div class="close-modal">
@@ -31,14 +24,14 @@
                 <p><%= image_tag 'modal_fire.svg' %> <%= hazard_notification.hazard.kind %></p>
             </div>
             <div class="modal-friends-card-hazard-warnings-container">
-                <p><%= image_tag 'modal_location.svg' %> Location</p>
+                <p><%= image_tag 'modal_location.svg' %> <%= hazard_notification.hazard.location %></p>
             </div>
             <div class="modal-friends-card-hazard-warnings-container">
-              <p><%= image_tag 'modal_loading.svg' %> Status</p>
+              <p><%= image_tag 'modal_loading.svg' %> <%= hazard_notification.hazard.status %></p>
             </div>
 
         </div>
-        <%= link_to "Mark yourself safe", mark_as_safe_path, method: :post, class: "mark-yourself-safe" %>
+        <%= link_to "SAFE", mark_as_safe_path, method: :post, class: "btn user-card-button modal-button" %>
 
       </div>
 
