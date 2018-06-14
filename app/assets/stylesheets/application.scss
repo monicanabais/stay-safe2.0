@@ -17,3 +17,8 @@
 *:focus {
   outline: none;
 }
+
+a:focus {
+  color: white !important;
+  text-decoration: none;
+}

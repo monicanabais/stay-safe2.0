@@ -8,10 +8,13 @@
 
 <div class="picture-background">
   <!-- <p class="landing-more-info-button">Get to know us</p> -->
-
+  <br>
   <h2 class="landing-logo">Stay Safe</h2>
   <!-- <p class="landing-logo-two-point-oh">2.0</p> -->
+  <br>
+  <br>
   <p class="landing-description">Be aware of dangerous situations around you and your family</p>
+  <br><br>
   <%= link_to new_user_session_path do %>
   <p  class="landing-start-button text-center ">Start here</p>
   <% end %>
@@ -28,36 +31,42 @@
   <div class="landing-desc-more text-center">
     <p class="landing-text color-text-desc">Add friends and family members <br> <br>Get live updates in case of hazard</p>
   </div>
-
+  <%= image_tag 'two-phones.png', alt: "screenshots", width: '65%', height: '60%', class: 'landing-desc-img' %>
 </div>
 
 <div class="landing-testimonials wrapper">
   <div class="quote text-center">
-    <h6>Monica</h6>
-    <%= image_tag '5stars.png', alt: "5-star rating", width: 95, height: 15%>
-    <br>
+    <h5>Monica</h5>
+    <%= image_tag '5stars.png', alt: "5-star rating", width: 95, height: 15 %>
     <br>
     <p>With the beginning of the wild fires season, Stay Safe makes me and my family feel really safe!</p>
   </div>
 
   <div class="quote text-center">
-    <h6>Pavel</h6>
+    <h5>Pavel</h5>
     <%= image_tag '5stars.png', alt: "5-star rating", width: 95, height: 15%>
-    <br>
     <br>
     <p>Finally an app that allows me to know that all my friends and family are safe, wherever they are in the world.</p>
   </div>
 
   <div class="quote text-center">
-    <h6>Maria</h6>
+    <h5>Maria</h5>
     <%= image_tag '5stars.png', alt: "5-star rating", width: 95, height: 15 %>
-    <br>
     <br>
     <p>Being a digital nomad, it's great to have a way to let my family and close friends know that I am safe, without having to share GPS coordinates with any third-parties. </p>
   </div>
 </div>
 
-  <div class="landing-map wrapper text-center">
+  <div class="landing-map wrapper">
+    <div class="landing-desc-more text-center">
       <p class="landing-text color-text-map">Check hazards on the map and Stay Safe wherever you go</p>
+    </div>
+    <%#= image_tag 'map.png', alt: "map-screenshot", width: '60%', height: '40%', class: 'landing-map-img' %>
+    <p class="landing-map-text text-center">Every summer countries such as Portugal and California become sites of potentially deadly forest fires. Whether you live in a risky area or are planning your visit, Stay Safe allows you to monitor live hazards on a map, so that you can plan your journey and avoid dangerous areas, keeping you and your family safe. </p>
+    <div class="footer footer-fixed-bottom">
+    Stay Safe 2018 ⓒ
   </div>
+  </div>
+
+
 

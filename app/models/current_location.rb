@@ -8,7 +8,7 @@ class CurrentLocation < ApplicationRecord
   after_create :check_for_hazards
 
   def check_for_hazards
-    hazards_nearby = Hazard.near([self.latitude, self.longitude], 20)
+    hazards_nearby = Hazard.near([self.latitude, self.longitude], 10)
 
     if hazards_nearby.present?
       hazards_nearby.each do |hazard|

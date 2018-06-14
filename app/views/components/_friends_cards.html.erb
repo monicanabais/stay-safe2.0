@@ -16,28 +16,37 @@
         <div class="friends-card-user-name">
           <p class="friends-card-user-name-text text-center"><%= friend.first_name %> <%= friend.last_name %></p>
         </div>
-      </div>
-
-      <div class="friends-card-front-arrow">
-        <%= image_tag 'cards_front_arrow.svg' %>
+        <div class="friends-card-front-arrow">
+          <%= image_tag 'cards_front_arrow.svg' %>
+        </div>
       </div>
 
       <div class="friends-card-button-content">
-        <div class="friends-card-corner-button"></div>
-        <div class="friends-card-hazard-warnings hidden">
-          <div class="friends-card-hazard-warnings-container">
-            <p><%= image_tag 'cards_fire.svg' %> Kind</p>
-          </div>
-           <div class="friends-card-hazard-warnings-container">
-            <p><%= image_tag 'cards_location.svg' %> Location</p>
-          </div>
-           <div class="friends-card-hazard-warnings-container">
-            <p><%= image_tag 'cards_loading.svg' %> Status</p>
+        <% if friend.safe? %>
+          <div class="friends-card-corner-button safe"></div>
+          <div class="friends-card-hazard-warnings hidden">
+            <div class="friends-card-hazard-warnings-container safe-friend">
+               <p><%= friend.first_name %> is Safe</p>
+            </div>
+
           </div>
 
+        <% else %>
+        <div class="friends-card-corner-button unsafe"></div>
+          <div class="friends-card-hazard-warnings hidden">
+            <div class="friends-card-hazard-warnings-container">
+              <p><%= image_tag 'cards_fire.svg' %> <%= friend.get_current_hazard.kind if friend.get_current_hazard %></p>
+            </div>
+             <div class="friends-card-hazard-warnings-container">
+              <p><%= image_tag 'cards_location.svg' %> <%= friend.get_current_hazard.location if friend.get_current_hazard %></p>
+            </div>
+             <div class="friends-card-hazard-warnings-container">
+              <p><%= image_tag 'cards_loading.svg' %> <%= friend.get_current_hazard.status if friend.get_current_hazard %></p>
+            </div>
 
+          </div>
 
-        </div>
+        <% end %>
       </div>
 
     </div>
@@ -49,7 +58,7 @@
 
       <div class="friends-card-actions">
         <%= link_to friendship_path(current_user.friendship_with(friend)), method: :delete do %>
-        <p><%= image_tag 'cards_delete.svg' %> Unfriend</p>
+        <p>Unfriend</p>
         <% end %>
       </div>
     </div>

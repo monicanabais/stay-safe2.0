@@ -1,0 +1,21 @@
+development:
+  cloud_name: mnabais
+  api_key: '752314414417246'
+  api_secret: UckPRguH9VEozZW7PLEUOeMlWOY
+  enhance_image_tag: true
+  static_image_support: false
+  secure: true
+production:
+  cloud_name: mnabais
+  api_key: '752314414417246'
+  api_secret: UckPRguH9VEozZW7PLEUOeMlWOY
+  enhance_image_tag: true
+  static_image_support: true
+  secure: true
+test:
+  cloud_name: mnabais
+  api_key: '752314414417246'
+  api_secret: UckPRguH9VEozZW7PLEUOeMlWOY
+  enhance_image_tag: true
+  static_image_support: false
+  secure: true
