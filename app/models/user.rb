@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_many :pending_friends, through: :friend_requests, source: :friend
   has_many :friendships, dependent: :destroy
   has_many :friends, through: :friendships
-  has_many :hazard_notifications
+  has_many :hazard_notifications, foreign_key: 'notifiee_id'
 
   enum state: [:safe, :in_danger_zone, :outside_danger_zone]
 
@@ -37,6 +37,11 @@ class User < ApplicationRecord
 
     def friendship_with(friend)
       Friendship.where(user:self, friend:friend).first
+    end
+
+    def get_current_hazard
+      notification = hazard_notifications.where(status: 0).first
+      notification.hazard if notification
     end
 
   end

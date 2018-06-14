@@ -1,20 +1,18 @@
-<% @friend_hazard_notifications.each do |hazard_notification| %>
-  <div class="card-notifications">
-    <div class="card-notification-sidebar <%= hazard_notification.read == true ? "read-sidebar" : "safe-sidebar-unread" %>"></div>
-    <div class="card-notifications-content">
-      <%= simple_form_for(hazard_notification, url: hazard_notification_read_path(hazard_notification), method: :patch) do |f| %>
-      <%= f.hidden_field :read, :value => true %>
-      <%= button_tag type: :submit, class: "read-notification-button" do %>
-        <div class="user-card-info">
-            <div class="small-notifications-card-user-avatar">
-              <%= cl_image_tag User.find(hazard_notification.user_id).avatar, crop: :thumb %>
-            </div>
-            <p>
-               Your Friend <%= User.find(hazard_notification.user_id).first_name %> <%= User.find(hazard_notification.user_id).last_name %> is safe
-            </p>
-        </div>
-      <% end %>
-      <% end %>
-    </div>
+<div class="card-notifications">
+  <div class="card-notification-sidebar <%= hazard_notification.read == true ? "read-sidebar" : "safe-sidebar-unread" %>"></div>
+  <div class="card-notifications-content">
+    <%= simple_form_for(hazard_notification, url: hazard_notification_read_path(hazard_notification), method: :patch) do |f| %>
+    <%= f.hidden_field :read, :value => true %>
+    <%= button_tag type: :submit, class: "read-notification-button" do %>
+      <div class="user-card-info">
+          <div class="small-notifications-card-user-avatar">
+            <%= cl_image_tag User.find(hazard_notification.user_id).avatar, crop: :thumb %>
+          </div>
+          <p>
+             Your Friend <%= User.find(hazard_notification.user_id).first_name %> <%= User.find(hazard_notification.user_id).last_name %> is safe
+          </p>
+      </div>
+    <% end %>
+    <% end %>
   </div>
-<% end %>
+</div>

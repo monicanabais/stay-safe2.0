@@ -18,7 +18,6 @@
   align-items: center;
   margin-bottom: 10px;
   .unread {
-    box-shadow: 0 0 15px #58C8D7 ;
     background-color: #FAFAFA;
   }
   .read {
@@ -106,34 +105,49 @@
   margin: 0;
   opacity: 0.9;
   img {
-    width: 20px;
+    width: 33px;
     margin: 8px;
-
+    opacity: 0.9;
   }
   p {
     margin: 0;
-    color: black;
-    // rgba(255, 255, 255, 0.9);
-    font-weight: lighter;
-    font-size: 12px;
+    color: rgba(0, 0, 0, 0.9);
+    font-weight: 400;
+    font-size: 18px;
   }
 }
-  .modal-friends-card-hazard-warnings-container {
-    margin: 0 auto;
-    width: 50%;
-  }
 
 .modal-friends-card-hazard-warnings-container {
-      display: flex;
-      justify-content: space-between;
-    }
-
-.close-modal {
-  display: inline-block !important;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 80vw;
+  margin-top: 15px;
+  margin-left: 65px;
 }
 
-.mark-yourself-safe {
-  width: 223px;
-  height: 39px;
+.close-modal {
+  display: none !important;
+}
 
+.modal-button {
+  margin: 20px 0;
+  padding-top: 9px !important;
+  height: 40px !important;
+  width: 110px !important;
+  &:focus {
+    background-color: #56bf7e !important;
+  }
+}
+
+.modal {
+  position: absolute !important;
+  top: 182px !important;
+  right: 0px !important;
+  bottom: 0px !important;
+  left: 22px !important;
+  z-index: 10040 !important;
+  overflow: auto !important;
+  overflow-y: auto !important;
+  width: 90vw;
 }

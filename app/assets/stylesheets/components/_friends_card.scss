@@ -59,27 +59,21 @@
   }
 }
 
-// .friends-card-user-relationship {
-//   position: absolute;
-//   width: 140px;
-//   top: 135px;
-//   left: 10px;
-//   p {
-//     font-size: 13px;
-//     font-weight: lighter;
-//   }
-// }
-
 .friends-card-corner-button {
   position: absolute;
   width: 31.111px;
   height: 35px;
   border-top-left-radius: 25px;
   border-bottom-right-radius: 130px;
-  background-color: #548F65;
   top: 0px;
   left: 0px;
   transition: 1s;
+  &.safe {
+    background-color: #548F65;
+  }
+  &.unsafe {
+    background-color: #DA2222;
+  }
 }
 
 .friends-card-big-corner-button {
@@ -90,10 +84,15 @@
   border-bottom-left-radius: 5px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 145px;
-  background-color: #548F65;
   top: 0px;
   left: 0px;
   transition: 1s;
+  &.safe {
+    background-color: #548F65;
+  }
+  &.unsafe {
+    background-color: #DA2222;
+  }
 }
 
 .friends-card-front-arrow {
@@ -120,25 +119,37 @@
   display: flex;
   flex-direction: column;
   opacity: 0.9;
-    img {
-      width: 20px;
-      margin: 8px;
-    }
-    p {
-      margin: 0;
-      color: rgba(255, 255, 255, 0.9);
-      font-weight: lighter;
-      font-size: 12px;
+  margin: 0;
+  img {
+    width: 20px;
+    margin: 8px;
+  }
+  p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 400;
+    font-size: 12px;
 
-    }
-
-    .friends-card-hazard-warnings-container {
-      display: flex;
-      justify-content: space-between;
-    }
+  }
 }
 
-
+.friends-card-hazard-warnings-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 35vw;
+  // margin-top: 15px;
+  // margin-left: 65px;
+  }
+.safe-friend {
+  &.safe-friend {
+    margin-top: 40px;
+  }
+  p {
+    font-size: 18px;
+    font-weight: 400;
+  }
+}
 
 .friends-card-hazard-warnings-appear {
   opacity: 1;
@@ -148,23 +159,27 @@
 
 .friends-card-back-arrow {
  position: absolute;
-  top: 162px;
+  top: 130px;
   right: 147px;
   font-size: 10px;
   transition: 1s;
+  width: 20px;
   img {
     width: 15px;
     opacity: 0.6;
+    position: absolute;
+    top: 34px;
+    left: 5px;
   }
 }
 
 .friends-card-back {
   transition: 2s;
   -moz-transform: scale(-1, 1);
--webkit-transform: scale(-1, 1);
--o-transform: scale(-1, 1);
--ms-transform: scale(-1, 1);
-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
 }
 
 .hide-back-content {
@@ -190,8 +205,8 @@ transform: scale(-1, 1);
     }
     p {
       margin:0 15px;
-      color: #7696CA;
-      font-weight: lighter;
+      color: black;
+      font-weight: 400;
       font-size: 18px;
     }
     a {
