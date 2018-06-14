@@ -4,8 +4,10 @@
       <p>Find your family and friends</p>
     </div>
     <div class="search-form user_search">
+      <i class="icons search-icon" style="
+    width: 20px; margin-bottom: 8px;"></i>
       <%= form_tag(users_path, method: :get) do %>
-      <%= text_field_tag :query, params[:query], class: "form-control", id: "user_first_name",placeholder: "Search" %>
+      <%= text_field_tag :query, params[:query], class: "form-control", id: "user_first_name",placeholder: "Type name here", style: "margin-bottom: 6px;" %>
       <% end %>
     </div>
   </div>
