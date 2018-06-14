@@ -11,9 +11,9 @@
   <div class="profile-name">
     <p class="text-center"><%= @user.first_name %> <%= @user.last_name %></p>
   </div>
+  <button id='location' class="location-turnon non-current-location-new ">Turn location ON</button>
 
   <% content_for :after_js do %>
-  <button id='location' class="location-turnon non-current-location-new ">Turn location ON</button>
   <script>
 
     const button = document.getElementById('location');
