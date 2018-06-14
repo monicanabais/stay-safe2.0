@@ -8,7 +8,7 @@ users = [
     last_name: "Castro",
     password: 123456,
     admin: true,
-    avatar: "http://res.cloudinary.com/mnabais/image/upload/v1528658296/e299buhvwgqmv5j3hfmw.jpg"
+    avatar: "https://res.cloudinary.com/mnabais/image/upload/v1528658296/e299buhvwgqmv5j3hfmw.jpg"
   },
   {
     email: "monica@mail.com",
@@ -16,7 +16,7 @@ users = [
     last_name: "Nabais",
     password: 123456,
     admin: true,
-    avatar: "http://res.cloudinary.com/mnabais/image/upload/v1528658332/mmmfxkenqoq1kyocsqwt.jpg"
+    avatar: "https://res.cloudinary.com/mnabais/image/upload/v1528658332/mmmfxkenqoq1kyocsqwt.jpg"
   },
   {
     email: "laura@mail.com",
@@ -32,7 +32,7 @@ users = [
     last_name: "Naumov",
     password: 123456,
     admin: true,
-    avatar: "http://res.cloudinary.com/mnabais/image/upload/v1528658344/gvyfhk7rzbwlzqxvqzpv.jpg"
+    avatar: "https://res.cloudinary.com/mnabais/image/upload/v1528658344/gvyfhk7rzbwlzqxvqzpv.jpg"
   },
   {
     email: "nick@mail.com",

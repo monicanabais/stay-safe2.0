@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
 
   :recoverable, :rememberable, :trackable, :validatable
-  #mount_uploader :avatar, PhotoUploader
+  mount_uploader :avatar, AvatarUploader
 
   has_many :friend_requests, dependent: :destroy
   has_many :pending_friends, through: :friend_requests, source: :friend
@@ -24,40 +24,11 @@ class User < ApplicationRecord
     comments: [:message],
     user: [:first_name, :last_name, :email]}
 
-
-    def remove_friend(friend)
-      self.friends.destroy(friend)
-    end
-
-    # def friends_notified
-    #   self.friendships._select! do |friend|
-    #     HazardNotification.where(user: friend).map(&:user).include? self.friendships
-    #   end
-    # end
-
-    def friendship_with(friend)
-      Friendship.where(user:self, friend:friend).first
-    end
-
+  def remove_friend(friend)
+    self.friends.destroy(friend)
   end
 
-
-
-
-
-# pg_search_scope :search_by_first_name_and_last_name_and_email,
-#     against: [ :first_name, :last_name, :email ],
-#     using: {
-#       tsearch: { prefix: true }
-#     }
-
-
-
-
-
-
-
-
-
-
-
+  def friendship_with(friend)
+    Friendship.where(user:self, friend:friend).first
+  end
+end
